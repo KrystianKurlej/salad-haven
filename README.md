@@ -12,8 +12,6 @@ Konfiguracja opiera się na wybraniu bazy dla sałatki, jej rozmiaru, a następn
 
 ## Szczegółowy opis techniczny
 
-**_do dokończenia_**
-
 - Aplikacja frontendowa, na potrzeby projektu nie będzie zawierała możliwości zakupu. Proces zakupu kończy się na podsumowaniu koszyka.
 - Dane będziemy pobierać przez API, które będzie wystawiać nam Headless CMS [Strapi](https://strapi.io/)
 
