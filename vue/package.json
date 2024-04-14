@@ -1,0 +1,23 @@
+{
+  "name": "salad-haven",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "sass": "sass src/scss/style.scss:src/css/style.css --watch",
+    "vite": "vite --host",
+    "dev": "npm-run-all --parallel sass vite",
+    "build": "npm run sass && npm run build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.74.1",
+    "vite": "^5.1.4"
+  }
+}

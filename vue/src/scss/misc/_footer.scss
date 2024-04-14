@@ -1,0 +1,83 @@
+.footer {
+	background-color: $color-black-950;
+	color: white;
+	padding: 3.5rem 0 2.5rem;
+	text-align: center;
+	@include flex-center;
+
+	.menu-list {
+		margin: 2.5rem auto 1rem;
+		justify-content: center;
+	}
+
+	.description {
+		max-width: 700px;
+		margin: 2.5rem auto 1rem;
+	}
+
+	@include breakpoint(phone) {
+		text-align: left;
+		align-items: flex-start;
+
+		.menu-list {
+			flex-direction: column;
+			align-items: flex-start;
+
+			.menu-item {
+				@include text-title-small;
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+.sm-menu-list,
+.politics-menu-list {
+	padding: 0;
+	list-style-type: none;
+	@include flex-center;
+	flex-direction: row;
+}
+
+.sm-menu-list {
+	gap: 1.5rem;
+
+	@include breakpoint(phone) {
+		justify-content: flex-start;
+	}
+}
+
+.politics-menu-list {
+	color: $color-black-200;
+
+	.menu-item:not(:last-child) {
+		position: relative;
+		margin-right: 0.75rem;
+		padding-right: calc(0.75rem + 3px);
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 3px;
+			height: 3px;
+			border-radius: 99px;
+			background-color: $color-black-200;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+		}
+	}
+
+	@include breakpoint(phone) {
+		flex-direction: column;
+		align-items: flex-start;
+
+		.menu-item:not(:last-child) {
+			padding-bottom: 1rem;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

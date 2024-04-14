@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+ vue:
+    build: ./vue
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./vue:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_STRAPI_PUBLIC_URL=http://127.0.0.1:1337
+      - VITE_STRAPI_API_TOKEN=af5ad12c805e9d0b6693d8e501f6672dc7f3e48f0602085352758354c4f23aeca495e15e9fc1ebb847472ef8a5e402975ada887f499876b279fd3851783c614d98b801c2c89fc3bdca663e800cbadc1fb1d59cacaaf92cd284a3ceec3a8877e417430ad1c6f1e0e620665facfeaf0115bc22683de5ed0de59f258d086fdd8e47
+
+ strapi:
+    build: ./strapi
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./strapi:/app
+      - /app/node_modules
+    environment:
+      - HOST=0.0.0.0
+      - PORT=1337
+      - APP_KEYS=3QmBaZxDqXfGL93NeTzFkQ==,RP+04Y0KYnEOPfGMaT/Xtw==,tB5CofC0QkOdoA04dF71Sw==,Wo2V3a1wNRvb85qtGuXt+w==
+      - API_TOKEN_SALT=lZnhZl01Aub3LkPNC+BCrA==
+      - ADMIN_JWT_SECRET=8CvOYya2qzyED+Rh9DNX4g==
+      - TRANSFER_TOKEN_SALT=n9ACHcx2/x2xo85RO8c5pQ==
+      - DATABASE_CLIENT=sqlite
+      - DATABASE_FILENAME=.tmp/data.db
+      - JWT_SECRET=uGCXozgYpIj/1wpYfWfFTg==

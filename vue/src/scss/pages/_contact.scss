@@ -1,0 +1,81 @@
+.contact-header {
+	margin-top: 4rem;
+
+	h1 {
+		@include text-display-medium;
+		margin: 0 0 0.625rem;
+
+		span {
+			color: $color-emerald-500;
+		}
+	}
+}
+
+.contact-main {
+	margin: 3.75rem 0 8rem;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 6rem;
+
+	.contact-info h3 {
+		margin: 0;
+		@include text-headline-large;
+	}
+
+	.contact-info p {
+		margin: 0 0 1.25rem;
+	}
+
+	@include breakpoint(tab-port) {
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		margin-top: 2rem;
+	}
+}
+
+.contact-form {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.25rem;
+
+	.col-span {
+		grid-column: 1 / span 3;
+	}
+
+	input,
+	textarea {
+		width: calc(100% - 1.25rem);
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	.policy {
+		@include text-body-xs;
+		display: inline-flex;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.form-footer {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	@include breakpoint(phone) {
+		&,
+		.form-footer {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+
+			button {
+				margin-top: 1.25rem;
+			}
+		}
+	}
+}
