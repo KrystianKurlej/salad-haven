@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingridients",
+  "info": {
+    "singularName": "ingridient",
+    "pluralName": "ingridients",
+    "displayName": "Ingridients"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
