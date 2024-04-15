@@ -43,16 +43,16 @@
             <div class="slider">
                 <div class="employees">
                     <div v-for="employee in employees" :key="employee.id" class="employee-card">
-                        <img :src="strapiUrl + employee.attributes.avatar.data.attributes.url" :alt="'Avatar' + employee.attributes.name">
-                        <h3 class="title">{{ employee.attributes.name }}</h3>
-                        <p class="role">{{ employee.attributes.role }}</p>
+                        <img :src="employee.imgSrc" :alt="'Zdjęcie ' + employee.name">
+                        <h3 class="title">{{ employee.name }}</h3>
+                        <p class="role">{{ employee.role }}</p>
                     </div>
                 </div>
                 <div class="employees">
                     <div v-for="employee in employees" :key="employee.id" class="employee-card">
-                        <img :src="strapiUrl + employee.attributes.avatar.data.attributes.url" :alt="'Avatar' + employee.attributes.name">
-                        <h3 class="title">{{ employee.attributes.name }}</h3>
-                        <p class="role">{{ employee.attributes.role }}</p>
+                        <img :src="employee.imgSrc" :alt="'Zdjęcie ' + employee.name">
+                        <h3 class="title">{{ employee.name }}</h3>
+                        <p class="role">{{ employee.role }}</p>
                     </div>
                 </div>
             </div>
@@ -62,6 +62,7 @@
 
 <script setup>
     import ArrowRightIco from '@components/icons/ArrowRightIco.vue';
+    import {API_URL} from '@src/main.js';
 </script>
 
 <script>
@@ -69,22 +70,16 @@ export default {
     data() {
         return {
             employees: [],
-            strapiUrl: import.meta.env.VITE_STRAPI_PUBLIC_URL,
-            strapiApiKey: import.meta.env.VITE_STRAPI_API_TOKEN,
         };
     },
     async created() {
         try {
-            const response = await fetch(this.strapiUrl + '/api/employees?populate=avatar', {
-                headers: {
-                'Authorization': `Bearer ${this.strapiApiKey}`
-                }
-            });
+            const response = await fetch(API_URL + '/employees');
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('API response was not ok');
             }
             const data = await response.json();
-            this.employees = data.data; // Zmieniono na data.data, aby odpowiadało strukturze JSON
+            this.employees = data;
         } catch (error) {
             console.error('Problem z pobieraniem danych o pracownikach: ', error)
         }

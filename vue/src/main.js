@@ -15,3 +15,6 @@ app.component("breadcrumbs", Breadcrumbs);
 
 // Montowanie aplikacji
 app.mount("#app");
+
+// Zmienna serwera z API
+export const API_URL = "http://localhost:3000";
