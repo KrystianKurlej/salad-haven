@@ -13,12 +13,14 @@ app.get("/", (req, res) => {
         <ol>
             <li><a href="/employees">Pracownicy</a></li>
             <li><a href="/ingredients">Składniki do sałatek</a></li>
+            <li><a href="/orderHistory">Historia zamówień</a></li>
         </ol>
     `);
 });
 
 app.use("/employees", employeesRouter);
 app.use("/ingredients", ingredientsRouter);
+app.use("/orderHistory", orderHistoryRouter);
 
 app.listen(port, () => {
 	console.log(`Serwer działa na http://localhost:${port}`);
