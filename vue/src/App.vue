@@ -20,9 +20,9 @@
       </div>
     </div>
   </nav>
-  <page-main>
+  <main>
     <router-view></router-view>
-  </page-main>
+  </main>
   <footer class="footer">
     <div class="wrapper">
       <Logo />
@@ -51,17 +51,48 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
-  import Logo from '@components/Logo.vue';
-  import AccountIco from '@components/icons/AccountIco.vue';
-  import CartIco from '@components/icons/CartIco.vue';
-  import FacebookIco from '@components/icons/FacebookIco.vue';
-  import InstagramIco from '@components/icons/InstagramIco.vue';
-  import TwitterIco from '@components/icons/TwitterIco.vue';
+import { onMounted, ref } from "vue";
+import { initializeApp } from "firebase/app";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
-  const isMenuActive = ref(false);
+import Logo from '@components/Logo.vue';
+import AccountIco from '@components/icons/AccountIco.vue';
+import CartIco from '@components/icons/CartIco.vue';
+import FacebookIco from '@components/icons/FacebookIco.vue';
+import InstagramIco from '@components/icons/InstagramIco.vue';
+import TwitterIco from '@components/icons/TwitterIco.vue';
 
-  const toggleMenu = () => {
-  isMenuActive.value = !isMenuActive.value;
-  };
+// Konfiguracja Firebase
+const firebaseConfig = {
+ apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+ authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+ projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+ storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+ messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+ appId: import.meta.env.VITE_FIREBASE_APP_ID,
+};
+
+// Inicjalizacja Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+let isMenuActive = ref(false);
+let isLoggedIn = ref(false);
+
+const toggleMenu = () => {
+ isMenuActive.value = !isMenuActive.value;
+};
+
+const handleSignOut = () => {
+ signOut(auth).then(() => {
+    isLoggedIn.value = false;
+    router.push("/");
+ });
+};
+
+onMounted(() => {
+ onAuthStateChanged(auth, (user) => {
+    isLoggedIn.value = !!user; // Zmiana: Ustawia wartość na true, jeśli użytkownik jest zalogowany
+ });
+});
 </script>
