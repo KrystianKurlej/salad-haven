@@ -1,20 +1,21 @@
 import {createApp} from "vue";
 import router from "./router";
 import App from "./App.vue";
-import "@css/style.css";
+import "@css/style.css"; // Upewnij się, że ścieżka do pliku CSS jest poprawna
 
-// Globalne komponenty
+// Importowanie globalnych komponentów
 import ButtonComponent from "@components/Button.vue";
 import Breadcrumbs from "@components/Breadcrumbs.vue";
 
-const app = createApp(App).use(router);
+// Tworzenie instancji Vue
+const vueApp = createApp(App).use(router);
 
-// Rejestracja komponentów globalnie
-app.component("button-component", ButtonComponent);
-app.component("breadcrumbs", Breadcrumbs);
+// Rejestracja globalnych komponentów
+vueApp.component("button-component", ButtonComponent);
+vueApp.component("breadcrumbs", Breadcrumbs);
 
 // Montowanie aplikacji
-app.mount("#app");
+vueApp.mount("#app");
 
-// Zmienna serwera z API
+// Eksportowanie URL-a API dla użycia w innych częściach aplikacji
 export const API_URL = "http://localhost:3000";
