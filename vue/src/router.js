@@ -9,6 +9,8 @@ import Dressing from "@views/Dressing.vue";
 import Proteins from "@views/Proteins.vue";
 import Topings from "@views/Topings.vue";
 import Sum from "@views/Sum.vue";
+import Login from "@views/Login.vue";
+import Register from "@views/Register.vue";
 
 export default createRouter({
   history: createWebHistory(),
@@ -69,5 +71,17 @@ export default createRouter({
       component: Account,
       meta: { breadcrumb: "Moje konto" },
     },
+		{
+			name: "Login",
+			path: "/login",
+			component: Login,
+			meta: {breadcrumb: "Login"},
+		},
+		{
+			name: "Register",
+			path: "/register",
+			component: Register,
+			meta: {breadcrumb: "Register"},
+		},
   ],
 });
