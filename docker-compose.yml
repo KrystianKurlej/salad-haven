@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+ vue:
+    build: ./vue
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./vue:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_FIREBASE_API_KEY=AIzaSyAem1B8XK5U5g2ABfiePcOTr3eDUKc33rw
+      - VITE_FIREBASE_AUTH_DOMAIN=bogateai.firebaseapp.com
+      - VITE_FIREBASE_PROJECT_ID=bogateai
+      - VITE_FIREBASE_STORAGE_BUCKET=bogateai.appspot.com
+      - VITE_FIREBASE_MESSAGING_SENDER_ID=564198852954
+      - VITE_FIREBASE_APP_ID=1:564198852954:web:550f0e6159468175e1cb63
+ api:
+    build: ./api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./api:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
