@@ -1,6 +1,7 @@
 <template>
-    <div class="wrapper">
+    <p>
         <breadcrumbs></breadcrumbs>
-        <h1>Konfigurator</h1>
-    </div>
-</template>
+    </p>
+    <router-view></router-view>
+  </template>
+  
