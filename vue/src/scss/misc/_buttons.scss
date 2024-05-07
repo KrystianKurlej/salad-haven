@@ -1,0 +1,89 @@
+button,
+.button {
+	border: none;
+	outline: none;
+	@include text-label-large;
+	border-radius: 0.5rem;
+	padding: 0 1rem;
+	@include flex-center;
+	gap: 0.5rem;
+	box-shadow: $shadow-default;
+	transition-duration: 300ms;
+	cursor: pointer;
+	font-family: $font-primary;
+
+	@include breakpoint(phone) {
+		width: 100%;
+	}
+
+	&.btn-large {
+		height: 3rem;
+	}
+
+	&,
+	&.btn-medium {
+		height: 2.5rem;
+	}
+
+	&.btn-small {
+		height: 2rem;
+	}
+
+	&.btn-primary {
+		background-color: $color-emerald-500;
+		color: white;
+	}
+
+	&.btn-secondary {
+		background-color: $color-black-50;
+		color: $color-emerald-900;
+	}
+
+	&.btn-danger {
+		background-color: $color-error-500;
+		color: white;
+	}
+
+	&.btn-stroke {
+		border: 1px solid $color-black-100;
+		color: $color-black-950;
+		background-color: inherit;
+	}
+
+	&:hover {
+		box-shadow: $shadow-hover;
+
+		&.btn-primary {
+			background-color: $color-emerald-400;
+		}
+
+		&.btn-secondary {
+			color: $color-emerald-800;
+		}
+
+		&.btn-danger {
+			background-color: $color-error-400;
+		}
+
+		&.btn-stroke {
+			color: $color-black-800;
+		}
+	}
+
+	&:active {
+		box-shadow: $shadow-default;
+
+		&.btn-primary {
+			background-color: $color-emerald-600;
+		}
+
+		&.btn-secondary {
+			background-color: $color-black-100;
+			color: $color-black-950;
+		}
+
+		&.btn-danger {
+			background-color: $color-error-600;
+		}
+	}
+}
