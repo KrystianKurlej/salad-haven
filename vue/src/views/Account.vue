@@ -106,7 +106,7 @@ const showToastMessage = (message, isError) => {
 
 const logout = () => {
   signOut(auth).then(() => {
-    // Po wylogowaniu możesz przekierować użytkownika na stronę logowania lub gdziekolwiek indziej
+    // Po wylogowaniu możesz przekierować użytkownika na stronę logowania 
     console.log('Użytkownik wylogowany.');
   }).catch((error) => {
     console.error('Błąd podczas wylogowywania:', error);
