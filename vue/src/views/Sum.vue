@@ -29,6 +29,11 @@
   </div>
 </template>
 
+<script setup>
+import ArrowRightIco from '@components/icons/ArrowRightIco.vue';
+import { API_URL } from '@src/main.js';
+</script>
+
 <script>
 export default {
   data() {
@@ -38,7 +43,7 @@ export default {
   },
   async created() {
       try {
-        const response = await fetch(API_URL + '/ingridients');
+        const response = await fetch(API_URL + '/ingredients');
         if (!response.ok) {
           throw new Error('API response was not ok');
         }

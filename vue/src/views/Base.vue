@@ -48,7 +48,7 @@
     },
     async created() {
       try {
-        const response = await fetch(API_URL + '/ingridients');
+        const response = await fetch(API_URL + '/ingredients');
         if (!response.ok) {
           throw new Error('API response was not ok');
         }
