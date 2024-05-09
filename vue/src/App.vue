@@ -11,7 +11,7 @@
           <li class="menu-item"><router-link title="Kontakt" to="/kontakt">Kontakt</router-link></li>
         </ul>
         <ul class="icons-menu-list">
-          <li class="menu-item-icon"><router-link title="Konto" to="/konto"><AccountIco width="24" height="24" /></router-link></li>
+          <li class="menu-item-icon"><router-link title="Konto" :to="isLoggedIn ? '/konto' : '/login'"><AccountIco width="24" height="24" /></router-link></li>
           <li class="menu-item-icon"><CartIco width="24" height="24" /></li>
         </ul>
         <button class="mobile-btn" @click="toggleMenu">
@@ -30,7 +30,7 @@
         <li class="menu-item"><router-link title="Strona główna" to="/">Strona główna</router-link></li>
         <li class="menu-item"><router-link title="Konfigurator" to="/konfigurator">Konfigurator</router-link></li>
         <li class="menu-item"><router-link title="Kontakt" to="/kontakt">Kontakt</router-link></li>
-        <li class="menu-item"><router-link title="Konto" to="/konto">Moje konto</router-link></li>
+        <li class="menu-item"><router-link title="Konto" :to="isLoggedIn ? '/konto' : '/login'">Moje konto</router-link></li>
         <li class="menu-item">Koszyk</li>
       </ul>
       <ul class="sm-menu-list">
