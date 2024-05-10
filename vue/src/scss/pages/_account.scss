@@ -1,0 +1,47 @@
+// login & register
+#loginHeader,
+#registerHeader{
+    text-align: center;
+    
+    h1{
+        padding: 2rem 0;
+        @include text-display-medium;
+
+        @include breakpoint(phone){
+            @include text-display-small;
+        }
+    }
+}
+
+#loginMain,
+#registerMain{
+    background-color: $color-black-50;
+    padding: 4rem 0;
+
+    p{
+        display: block;
+        margin: 0 0 0.3rem;
+    }
+
+    .wrapper{
+        max-width: 25rem;
+    }
+
+    button.cta{
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    span{
+        display: block;
+        margin-top: 0.625rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    #resetPassword{
+        justify-content: flex-end;
+    }
+}
+
+// account

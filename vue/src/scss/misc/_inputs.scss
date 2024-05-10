@@ -1,6 +1,6 @@
 input,
 textarea {
-	width: 100%;
+	width: calc(100% - 1rem);
 	border-radius: 0.38rem;
 	border: 1px solid $color-black-200;
 	@include text-body-medium;

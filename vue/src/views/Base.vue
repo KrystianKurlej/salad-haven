@@ -18,7 +18,7 @@
       </div>
     </div>
     <button-component v-if="selectedCount > 0" size="large" variant="secondary">
-    <router-link title="Konfigurator" to="/konfigurator/vegie" class="btn-link">
+    <router-link title="Owoce i warzywa" to="owoce-i-warzywa" class="btn-link">
       Dalej
       <ArrowRightIco width="24" height="24"/>
     </router-link>

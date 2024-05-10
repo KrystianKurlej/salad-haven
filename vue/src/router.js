@@ -26,38 +26,36 @@ export default createRouter({
       path: "/konfigurator",
       component: Configurator,
       meta: { breadcrumb: "Konfigurator" },
-      children: [
-        {
-          path: "", 
-          component: Base,
-          meta: { breadcrumb: "Base" },
-        },
-        {
-          path: "vegie",
-          component: Vegie,
-          meta: { breadcrumb: "Vegie" },
-        },
-        {
-          path: "proteins",
-          component: Proteins,
-          meta: { breadcrumb: "Proteins" },
-        },
-        {
-          path: "topings",
-          component: Topings,
-          meta: { breadcrumb: "Topings" },
-        },
-        {
-          path: "dressing",
-          component: Dressing,
-          meta: { breadcrumb: "Dressing" },
-        },
-        {
-          path: "sum",
-          component: Sum,
-          meta: { breadcrumb: "Sum" },
-        },
-      ],
+    },
+    {
+      path: "/konfigurator/baza", 
+      component: Base,
+      meta: { breadcrumb: "Baza" },
+    },
+    {
+      path: "/konfigurator/owoce-i-warzywa",
+      component: Vegie,
+      meta: { breadcrumb: "Owoce i warzywa" },
+    },
+    {
+      path: "/konfigurator/proteiny",
+      component: Proteins,
+      meta: { breadcrumb: "Proteiny" },
+    },
+    {
+      path: "/konfigurator/dodatki",
+      component: Topings,
+      meta: { breadcrumb: "Dodatki" },
+    },
+    {
+      path: "/konfigurator/dressing",
+      component: Dressing,
+      meta: { breadcrumb: "Dressing" },
+    },
+    {
+      path: "/konfigurator/podsumowanie",
+      component: Sum,
+      meta: { breadcrumb: "Podsumowanie" },
     },
     {
       name: "Kontakt",
@@ -73,15 +71,15 @@ export default createRouter({
     },
 		{
 			name: "Login",
-			path: "/login",
+			path: "/logowanie",
 			component: Login,
-			meta: {breadcrumb: "Login"},
+			meta: {breadcrumb: "Zaloguj się"},
 		},
 		{
 			name: "Register",
-			path: "/register",
+			path: "/rejestracja",
 			component: Register,
-			meta: {breadcrumb: "Register"},
+			meta: {breadcrumb: "Zarejestruj się"},
 		},
   ],
 });

@@ -20,13 +20,13 @@
       </div>
   
       <div style="display: flex; justify-content: center;">
-        <router-link title="Konfigurator" to="/konfigurator/vegie" class="btn-link">
+        <router-link title="Owoce i warzywa" to="owoce-i-warzywa" class="btn-link">
           <button-component size="large" variant="secondary">
             <ArrowRightIco width="24" height="24" style="transform: rotate(180deg);"/>    
             Wstecz
           </button-component>
         </router-link>
-        <router-link title="Konfigurator" to="/konfigurator/dressing" class="btn-link">
+        <router-link title="Dressing" to="dressing" class="btn-link">
           <button-component v-if="selectedCount > 0" size="large" variant="secondary">
             Dalej 
             <ArrowRightIco width="24" height="24"/>
