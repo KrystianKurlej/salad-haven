@@ -5,7 +5,7 @@
         "category": "base",
         "price": 2.0,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/39b1/1b5d/5675e4cbebdb421bb4423326b012ca02?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kTwFO8GAxxrmngM8~Qr6VYWpJU0zLOt2yCXPxnkB4UpGPTyqmUoU29eOS2W8VIR-m1vAntoPLUaUTW23LkNQiznTcYPcV8DR8~eZVX9wRjiC7niEvuUbSdo3ODdgvzR8mOagWvsi~93~NYgcVAg-rrfw~R~kXApIVERy8H1Ae7NxlCeSa9P0PI~8BY0wv2jVVvxzzox5nGKjQ-Ri11S8a6h2Pure4rpMyA-5usv7pGUDrrruSWNYyPbn8DXX9fZi2tovv-dXSB-gWq5U0MCatSrRU7Yo0MlRKXM3ip4cosjv7ISEmS7oCTXytimNlPFujdkbif1Y0~VZfzG4E9EuUA__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FLis%CC%81cie%20sa%C5%82aty.jpg?alt=media&token=f836f4bd-38a5-447c-8a10-f3a8d877ebbd"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "category": "base",
         "price": 3.5,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/8012/2666/97acf90dcd545045e6c5158608dff875?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=II0fTqjPjukhJOspPcJSURwNnd42cXo6PQbd26TyhZhBgonnt8P~F0Cgdm25Ciy2MVFKbqR301sv0oqla0kXH4VpDc20Vfw7tBT4kEXh0QDYpOKzaSiJ9zRho2Wfh0znY2gQmWSS329kIxMgd3WmeBNORAie92LKRpuGoKRQ40Ua4m2rG002uiOLZ1LoFqVgKy6rRePWfvU77scWiDDQPvSM4GFduQj2a46RWIhxz-sPTjLmNx8XNk0QL7EQs6XfzkHoynGrh2LBw1QXHL9hdq6hVdmOEuiGP463hy63c0s0yV4zRDceFnouKsW26DDvN91Og8WCSMeM6gLY137Pxw__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FRukola.jpg?alt=media&token=8ee50ea8-66eb-4b20-b115-65b8ed964587"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "category": "base",
         "price": 3.0,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/aa1b9c41734040b67535e33a7cd38d5b883c048b?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FSzpinak.jpg?alt=media&token=5ea99c8e-f885-40a8-899f-ccf389e98869"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "category": "base",
         "price": 4.0,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/2a4e/cb9a/bc810d1a81647c5739212ab9fb275edd?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j7EpjGpMdZE7qTBqjVwlp~uY4kcjued4DO14lZwPUBTO5bIob7g4ezGij9PdEPVstuxWflDZsv~sDROOH0do0kIDV1joGk-OAhbDuraNqsDuN2jhmqKUOeg6DdzGcWdW~krNpAdJHdmDDYK-UA8zsvEKNtEsOiWRfifmH4~AAkGDPYj2uAA3owx9aYr8jlxCpqnN~EcR~4vQNwiiHGBEvK0x37zfh8sD8ypx7Af8nrj8OTQ87NM8o2iv4mYxtxFD1xRz0BCL6tNj-dsS42JhheJZkhiRUz4G7m7F0oEXxdzEc9EnMBmBNocEXltFvvFe3aM3-b5BSfmG5TU2POt-6w__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FMieszanka%20sa%C5%82at.png?alt=media&token=85a9569d-7403-4d36-b45f-b21f16496dc4"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "category": "base",
         "price": 5.0,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/a8af/668a/840aabaa600dd29c96ec9044995c3569?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j5ZdMGcLUVcswEAANJcWuVPlmizli8sYl-ee55ZxVRCzTlSQjgSrNAUhgcW9TJi1GnIDvWydafVjHxn8Her-NVKShNIGqjNl7LJi9XXeFTtCn-jGge3I7U-kMLm9uY6klzzNqD5RXgubHIes-DcBCJAkuZSu8q15uuMer7pPtAUMcoB~t2ZehHmDysbyzxxuEXbbqKCRvoG1PbN-HjTAMUt~o44O2I3mLnpFKy1cM~91OEPUNrrzSO-PrkzTxap4n0jPr7~lKrO9USsfRazZ7QDxsWFGoxXlhu6l4sEv~Fg0ixygOpqeshMzvG~YTiPkyFE6bplxdrK0p5uJYvDChw__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FMakaron%20pe%C5%82noziarnisty.jpg?alt=media&token=1f0fffa4-6c3b-4936-9f17-3ff4b38969cc"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "category": "base",
         "price": 4.0,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/0f75/430c/2e0d3efbb1ff44fbdfbc275b677f9c9c?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CZ57tMjLA8nzD~eUcdKMVW0s1ILLcgI3t4VVncARWYtACuMTFyszkgT-R9uUJfDjIn55fdq7VVmUzeK-MgY8namny2ReDU1HZVTSLAeahnv7oOkduorl1T2TsE9F3w2TFjsPyFaqcWiMu7muh5TpVBRU0JOqgFOZ~N99P9yEv1gMxSinzoIzbbFUKCa2du3nyYAwHmkm~e5HAfH8-ioZ~Wi-IZoJ0EDbz2QJvcX4Kt7j7veZ-1OOT~~esuwRzEOYxoLH2rTC6HfHQ0dh8qxvGy9j~um7FUQAOM8L76805inygUJQ9ZkW6dMcSzVEZE-MNPxdlq8QkEkx-G6Oadv3iw__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FRyz%CC%87%20basmanti.jpg?alt=media&token=fc7dba76-5522-4c46-bfe4-e38e26e551c9"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "category": "base",
         "price": 6.75,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/eda68c14b3eb6a295aaa248ee7013b3265712fe7?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FJarmuz%CC%87.jpg?alt=media&token=0422e35f-d808-4644-817c-87d9c43e4a11"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "category": "vegetables",
         "price": 3.25,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/d5bf45d1d9ed26081f70283ee2f821902cfae57d?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FPomidory.jpg?alt=media&token=4df4411e-22c3-4cb7-9f51-0778e848e7de"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "category": "vegetables",
         "price": 2.5,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/8d38/d0d8/d7a78100af3068151eca2b86f074349e?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FIBU48AVAIhoHdiboK099zhltKkJatyucqattbcUFCXvZn1Eo4XwtxwCyhzF4lTv-KgtR2nMzORFN0vclIRRbiXaci3kLvOS~nG6QGAimu7qG0sw5CgEv34QD6p4elJynpUVzL8~WAU6iI7gQohcqoHnKVpoHFVsw4hdJ0zO1BvABYhd-Jq9mKdDgiQuGDyBYEsGsG7doxqmSmi0xf-2aaFsNdQlGActubk6U7RPm2wDWdGRAYiZxF0zGwCFgcdiGZxyZqTj0JhHxLTRiK~5dvktqeXcA2xF5EzTswTxoFDdghH6Bt3zC9-7gRgHhLksz4M-DMHm-PKdipPu3dUGRg__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FOgo%CC%81rki.jpg?alt=media&token=24defe04-a235-453a-8495-65c11f907465"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "category": "vegetables",
         "price": 4.5,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/018d/7020/e7a1b32df41e3096a681aa680c820ff7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hnP5WVLQJGiDIom~dr5UIko0e8BTEZhmeAeb~nSuSvVC1-RZu2NN9H0svEfVjagUSn5ydyYtZgklqQJSE~0XP6Zmcpy07~KfqB1HEGAfsQsx-tnlYIx4XVbhcnfs5p~I7MEbtQR58PldNBCx9Ba1ukZbBI6zR~Klbsps91rGn7lBsprLiCCGgDnlBS1VCYqPbDydm7HUpX6Pyu21zuSwEUigcnfpL1BrJP~P68q-6dUgn7i5KVI5mhP9Q15Org0QzuDFPsYObCv38IkaMVWeQWzReO5XkT-cYPSjDBxBi4Gr4Q6VfGNJF2Q5wszIw-5h06pOWCwqzI9pEtn20gAH5g__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FPapryka%20czerwona.jpg?alt=media&token=8f5173b5-8b80-4aa8-831c-a27173293005"
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "category": "vegetables",
         "price": 2.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/f47e/c15f/3febb001d0c14ed6d4f9f6a5fa210b53?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PIF3hnHYl9va1dRaa29DgasHIU0VVm13Ew~xaLyYWCVRgW59qwOmaSMetb2XKF8znOkJg67vjaP-Yr14RqPbSmurw2aqo1-v3RBonngb7Ax5ctUBRSHKKcZDOEOvQCnQMOb7VtI0EkCa772n6P28GFgjb3oBBqMF4v~zTNbnVc3yQ6pJoaFSfWSzzg35kIMdaJax1twM3npPWMag5a9w~Uk5E6we7EG4IMO~JaKNwRxcT0Y~AsdR7q74uaCQ-a1v5BMecAVKqkhR81c3UZmZzJVGT3LCjmB-Oo~nx8APeAJFOLDIrSEOGpSiEgmHbSKm-QG~O-Rr340Ho3II3J8DMg__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FMarchewka.jpg?alt=media&token=a79a2539-c453-4a9f-a1c3-83f5012189b7"
     },
     {
         "id": 12,
@@ -93,7 +93,7 @@
         "category": "vegetables",
         "price": 5.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/3286/42bd/0dfb1f651c74bca34de772ac1e769f2e?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NPKVSQC9kckM61aPXkZXPrGnplXiozh3VVIMgmEWZQv1F6xyvtwprU6QczJKnOT3btAbnK6-mN6x-jVSANyc~Ig5Zxw0FrF8MLDR5L8LRIRGFszoh-U24a-BOpKuOCoMSYz3vlFI8IWtCXkDWpuHIf9efSviBRvjXTMwwAo9A4VMmFe5URUD2GanLt1HjiiHxp0BdjfuJLIPIh5adw3Xv3mOx14kMlKhkFDpDrqdZ-M92wt4MvvTPkqC1lasUOaq6xVh8JvznovHAYfqvMXWITxuy5UqRQbhKJXFvkkFwmqlntBmSZ8UJmIL9FDp0CdXZ8GrayhiAIyvB8fL6u7pzQ__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FAwokado.jpg?alt=media&token=9d6eea86-8865-4feb-bcb9-f17255d61d0b"
     },
     {
         "id": 13,
@@ -101,7 +101,7 @@
         "category": "vegetables",
         "price": 1.5,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/713f3cd64befe4a905bfece53325d13978b71199?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FCzosnek.jpg?alt=media&token=c99e4fcc-607c-4cae-9f2d-566eed6d5f74"
     },
     {
         "id": 14,
@@ -109,7 +109,7 @@
         "category": "vegetables",
         "price": 2.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/3426/52fa/2f407dd5a3038c245fb629906c38736b?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XAhKtrwDeLk-Y43vpTMEb6xpRI~sN6drVdBMG25zq9-c0Uqm8D4C9Hmx1qQAN6O7Wo6y5vXOLeRYja33gLOBc5lqQNK7Q7bG0Fv2XktYBEZD54DPTlSVkHOb9k6kaAg3Wq4UAZVALjoU~OL8kqaEiPMUTH1XnzNMnyAr9jHUFi~7zVAL4IeqjVr2TCKRrqc~I2Y9yJLenFUStUb7qLNPBjX8GTVAN-lpH4-uLl7QjuJwwko4ee9xv9k0HorUxzKjowjVszjnTRH-qCmAfmlAceiyI9vmt1cJ68ZcsIGwbj5GOzUeTLnsr7TKgvcC462i1SpXxGYQ0yOFV7YPNyIqBw__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FCebula%20czerwona.jpg?alt=media&token=8c496b59-32cc-4c95-a809-bf1267a2ca77"
     },
     {
         "id": 15,
@@ -117,7 +117,7 @@
         "category": "vegetables",
         "price": 2.25,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/be83/94fa/b485959eb97d1e4a72f423aeedc7ef3e?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PulxBDbPGtX39KVBy~bKxL8PEMOtFnLSs3fS55w34Eaaljir3qmlD~gGnI4zpqCiapNKf84CGlvY45GcNmhGNp4GooV75xXyeaZEtnTSVvR0MhwUIyWm5zSHAt3mk9hk64mzM9DVuNrcyoY07XwOr7jSiZ8IsEYWbHzRihTmCn3j4SivFJK9EaREC1h~NxapmYuJuwRk4FgGH6hdedP4~QrBzxJjWoRbA1HrqkIJPemw~h0VSTWiRHeKrS9zV3Y7ed76n~tgH2C3jh9uPuZYb3OoJwAvq~ByaaCXuY9lf8XK6na-U2X~~CS0fobRFKh6YiqKojjhf1KrPKRM5buaaQ__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FJab%C5%82ko.jpg?alt=media&token=66966812-b76d-4985-b3ca-132676c44e12"
     },
     {
         "id": 16,
@@ -125,7 +125,7 @@
         "category": "vegetables",
         "price": 2.75,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/bd52b7981961b8c5c63927111d21c2be39b13224?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FGruszka.jpg?alt=media&token=c6954c1a-e116-4992-a8c5-ffde23d47b41"
     },
     {
         "id": 17,
@@ -133,7 +133,7 @@
         "category": "vegetables",
         "price": 5.5,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/cef48fb39cbb456ab69241caf3b41ad99ea80221?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FOwoce%2FGranat.jpg?alt=media&token=d845a2be-339d-4049-a633-d1e85e963ba6"
     },
     {
         "id": 18,
@@ -141,7 +141,7 @@
         "category": "proteins",
         "price": 7.25,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/c716/f6be/4b9275736ea1af57ab8fa01c7f932496?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W9mqH8T28FQu4hbr~GO4qkzsuwfs8HKciMk9TfpSaVtt4tOwtxgHpmdxioF0NFw-imduZL4F7pnmUsDSYzetK9RO0STKbyhNX3LMk0yuObh1HLnaFarLSyCYG6eVWi~hJZJ~c1HGg1b4dACLREVTkDAuJi1KYpBFzcX~3huHIQJ01YlmG6mBVOCRLS1tNJt8gEnQtDNhkyh5J7tusza-PHuRnao9-t7ZaCSsvPrnVCc8kimLYWQer6H-WmUjw-066fMhP5m5KMt6ypkEKOok4KVWAhwcUpiwX8rjJk9mvjaetMh85uj~bwVkr0xI3nbuMmpQbivWF09bl~7ZtHCbVg__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FGrillowany%20kurczak.jpg?alt=media&token=cf54de96-813d-4e12-964b-21067d3aedb3"
     },
     {
         "id": 19,
@@ -149,7 +149,7 @@
         "category": "proteins",
         "price": 12.75,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/978f1a22447889cdc69536872f65bd2a144442f9?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FKrewetki.jpg?alt=media&token=47c66062-0aa3-438d-994a-bb3f6a030c49"
     },
     {
         "id": 20,
@@ -157,7 +157,7 @@
         "category": "proteins",
         "price": 6.5,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/9a17/d5ef/33fbb8dd0e32bb537bb08a2d3f300a90?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RJI3glZDJoui0odsOFhOC-vGEVzEEDSY3AR9oxP3X7nB0rTX33ZAQqN64~KJBEycUkR0wUezOFT2eh~iKSgcqiE0TiAuuaTc3sntv68UQbvcGgQ48A5aZb05~Rgt77ae3i1y6X~OSjcL9Iymr~9kOKZxdm9B2IwIUyedK5-o3BszK8Scm24lHvcdILLbboBcjqxmvtx8qcmundDllysy4gMm2q18-Yk7QbCemO7eVSMXZOTodB33-k0aYeLKFH5NMgkJAyHLi4TqgwxVxyvFYU~b1HGFs5q5LqjVU9L2iPuPF~xgdkXFzb9dOe6VqhEeV1WyPIh4cjKEG5R80K6FnQ__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FTofu.jpg?alt=media&token=5f6515bf-4d5c-4d94-8e35-fdea6fb2fd40"
     },
     {
         "id": 21,
@@ -165,7 +165,7 @@
         "category": "proteins",
         "price": 4.0,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/76156c9229a2df4573afb7648cad10f573dc41d7?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FJajka%20na%20twardo.jpg?alt=media&token=59d4d039-7777-4832-b371-04c8a93b71a8"
     },
     {
         "id": 22,
@@ -173,7 +173,7 @@
         "category": "proteins",
         "price": 9.5,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/a4b4/bfa7/f11685fcd2b3172188be0d9fb9c22323?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gEgh2tEeaTDLzU8NOU8kOTpVHT4w8hJacpW~Wq0g3DfWA5nBGwX-u4t~j9YJOM3MS5G8BJvRy-AnL~XYpxdwsJYzyOWzc43~SH1ozfylUNhfupcamKS7tXbowfxfx14q1WPN8APijkfoxcpRMdNVK-qRxBa3J5tFHcYtEu8XLPY2BiVX54haDyuhg5~wMrl00WJOcg-TYuH6sq~f8dFnJbzfNNMptFVmB3mbU-0Y7fQE3zEcpgV-hqVbfE95QkRa3P~BAznqWlzzcmvNny37hHqT5anwNRuRb77Ha8qzf~iDaogHEgYfWih82UUOTzk7XtoZWQwW64tJHkLJ2hSztA__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FTun%CC%81czyk.jpg?alt=media&token=1a49b947-2d4c-419c-94cf-1e05ac48eca5"
     },
     {
         "id": 23,
@@ -181,7 +181,7 @@
         "category": "proteins",
         "price": 3.75,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/8a455173fbc8afa9ebde8da12bf08d336bcec1fe?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FSoczewica.jpg?alt=media&token=22d373a1-7014-496d-aa16-9ccd5a8b7857"
     },
     {
         "id": 24,
@@ -189,7 +189,7 @@
         "category": "proteins",
         "price": 8.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/2398/124e/53060f8f75d2c173e286e20ec8c8394a?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ioGG43ZaMSDcFviMe5eKhLUrBdj45587li5h14qKPWo8HkEBAkhwHPlvanFw31uqdhn2De2IClJlMpIdU8t4aPXBPCM1FfjyYaunhBh~IEPnMEzHiXqyIcM3iWZEd~qdJuJY2aZkRsBW3eHqjqksqNlpGvxTgIWecdsM7ptPuNVXMNE1Ho~Gt-OJQutCTJ5CUPeK1tBiSJO42MYB8imz3UszIO1L9BtqAymraJEBisvcZBiJFhN9UiiiaCbmKGgS6~e496NgkjzKQJ512RotLeFt~eG1UnC5fLWM~-tqmuEcrV3ebq16BYwIUJLZoHBYCJCg96DwSWyIjBl70Vp2sA__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FIndyk.jpg?alt=media&token=71781dd5-23ce-4823-8fb8-0240b8872d37"
     },
     {
         "id": 25,
@@ -197,7 +197,7 @@
         "category": "proteins",
         "price": 10.5,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/483a2daf9f06e9e2d2ca7eca6b6170fb7e325530?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FWo%C5%82owina.jpg?alt=media&token=7c94d3b3-2e07-48f8-b6b2-9202f212d866"
     },
     {
         "id": 26,
@@ -205,7 +205,7 @@
         "category": "proteins",
         "price": 6.25,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/1e77/a07b/e2d54bdc0a2a90f570891dd6eeb2334d?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XjMdB3qgoDyvYMBE-geJliRG8SFDpz7oK0g7HH610ZORn3aWSsfPa1AZDoKa1b7lztkyKNO8zz44RnVeLYh10GRUzQJqA81~H7S8ag2RwNYVTTYbqd-V9MAe9QUciQoz~ddwdsgdUljnETPVwV4iPhhxf6F7naYBus52gOQ6HjmfLOXnebZqgWE3hFoBc19xx7MuAKBMD9AMvsnFbzQD8DXJKQzJ5ivGfURtDQVd3fD6CbQy9Fi58H7qjIRS5qQ3ibkc74s2rxNc0Fu4YXE7zzJP2AWyuZhRyRHz5NN6XyAZsdwOkHnql4BuJyqvuqPPj3doBeBTfxE3lS20VSWOrw__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FProteiny%2FSer%20feta.jpg?alt=media&token=6409d8ac-357b-4e65-aca4-668a74e3d3ec"
     },
     {
         "id": 27,
@@ -213,7 +213,7 @@
         "category": "dressing",
         "price": 5.25,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/d15602521a873ef2b00c65e8b36a0da8f0062584?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FOliwa%20z%20oliwek.jpg?alt=media&token=fa4e3b50-3c1e-421b-875f-1a709072f37a"
     },
     {
         "id": 28,
@@ -221,7 +221,7 @@
         "category": "dressing",
         "price": 7.5,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/4c3b7b21c16ce1f22fd9ae9acd93055288aa34fe?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FSos%20Cezar.jpg?alt=media&token=719811e4-98eb-41d7-b578-27ad47dca305"
     },
     {
         "id": 29,
@@ -229,7 +229,7 @@
         "category": "dressing",
         "price": 4.25,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/c3b8/8de6/20118105869fab321c318a583c0dc9ea?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g5ebIbWOiL~4y-KKUKURfwM6o~KAgA58ox660aEYjVMg9ZyFML9rPtZuxTJU~LIvaL4-Ves2q0xtXX4WKoxR~mFxDQQ7osm0tsyAFXwj1hdqEmLeQnSVIzGGAe3uAwBUWj7Zyqfv5QmgrSewUatczullpztxiyV9TAWFj0d78ur-Z3ICnC~hjwvESW6auFHxtYavR2QYwGSeTP9RUL4T5DDZt-F~l9tTTPW~jMo9N5xnS~mN0zR4QCdMYWlcZlwbngYMUw43V5JnAHC5njuEfefUZqEIjuIkWiUBvuyu9G8iH594e-1ubIIlpu5DKvN9GCZpsXr8nRLXWsYkSxDTuw__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FOcet%20balsamiczny.jpg?alt=media&token=52878b38-ad1e-4450-b189-2ab1e0cce19d"
     },
     {
         "id": 30,
@@ -237,7 +237,7 @@
         "category": "dressing",
         "price": 3.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/d12f/fda7/33c7141c461254a7b1c8d66c04a97113?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bRGNCJ3DSk6F8wy2-d2Psri1kekXslVZYuJ9WizgN7DBay4rXYdd9QvJhxbJthpo1V8CJ5G9FIuBcVa0JPUHkPTpBLj8BRfSaOukxL4kafXqCO9QpVoAOI9jQt0HXOkHnYqDi7X7vlB3QmKMbbSpZ512QxWQMYVDzjgZR3x7IGAawUIHDtwVPceplm6ftL8o2VkOpl81RsViD04yet4CFo0mzYIeApg~8VHq4SuVaSZAu0nxCYKjaxJ~oxfvSEOQ0aF1z0vQiTlRAwULZ12ADUsdl9NvywuvxUYspBNiXaikWJ7-xxb-xFTN9cCaAHgw~RqjQVT9TGbuV~vr3WtOVg__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FSos%20jogurtowy.jpg?alt=media&token=420f79e8-4016-4e05-a7b1-d00aafaed0bb"
     },
     {
         "id": 31,
@@ -245,7 +245,7 @@
         "category": "dressing",
         "price": 3.25,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/d97f/ebf9/d503649a6278376bf6a83c7abe92813c?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OlsWQO7qPOFTSkyQYxwqqo5BG~EQYoDB6l70GOVu16nMTndxVgp0VK1lL9sK0UZgaoHSI32I3af0v0fSHHiD~p00TZMj5-kRkoenZ7nUjDeuU~gX72JuWP83bNTsMuhvPZ0omPqLv~whh-JWjdslNH7MUkKLbLAzMkSeJ1EYjwWUt2iEuo1PRpR07lb9S6XD7D1p2OvkfDzCGqlEK505UOpK~MTFgu76Lg-ZDWcaNhxpbKc~WpYuM9LAYDBlrWbsxtvqXsf~wqkFCuuNIIJ1z3qO6kFe4degTv3xE2ARfsaBePPZ2GcuCZBPaiL~DOCI2Gv~UDv61sfLyDXJt1RSYQ__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FSos%20pomidorowy.jpg?alt=media&token=c6ebe579-79a6-4d8c-b6bc-1c80548ad59f"
     },
     {
         "id": 32,
@@ -253,7 +253,7 @@
         "category": "dressing",
         "price": 2.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/02ec/60ca/9ec03e8ae6d620a543a3d1be03e6b870?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jrzIi7GZAD1aLqjO7Y8VaKErgFhPVT~aoCdASXfRImVrH3GFIaODel4NOj-EJHwPwO05FyO~QPChIfZFx8JR7~J36eom0DW4bA3F1r5uJykXv8YVWGy7Uw84AghZrASGa2yI7w7ePIrmd~7cjI7xO2EAwgd9Md2lYkqceOVF6eOnSpDPgpZ6GMoHNwbx9X1aJaIux5n2KNffOt4bgdXxOmkW640QnazxNqHJnif6tj3co-X0D~Amu0W~Y9m9KysnHtU9gB-x-q-Gjzx4nehZu2Q2u~zcjw09dT6cVnyh6S5K5Zx8Oqf9ydrEDBotFuYb4uobnB8O8UFbB4PlkWOwfA__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FSos%20musztardowy.jpg?alt=media&token=6d5c98a7-0a76-492e-a67d-6489ceafede8"
     },
     {
         "id": 33,
@@ -261,7 +261,7 @@
         "category": "dressing",
         "price": 3.5,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/041f/dae3/0cda807c7a159a8ed4148c9265034eca?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UWLkCAmo-WgkXvI0nC~GGk5hB06trXqa2d7K~kPvdhunp1nulgFxJetgPXAM~WvH465mXrEFemP86PJf619cuQw35T9MZYS6At~fgBJ83Zw6UykmUIlOPLM7wr1Qm5XoT4942P9lzBitZYGNLiHgpMtgcTShPHVMXfstg9CzxM1tx2zZxA~uSv58e0TIlZKwDMKv6R9tuICgFj9G42NVY-MXYWpCwYxWjgN6HkQcnykkeoZmPEvD7UXPNwKPfUQxGzKsWJZXuCrPTwmzb96Sr~AaEvWMYqDr0AdUJe92pYvOh6-zNjZ11CofE7x-R5aQtVodzW0aZbYKkI6ArDeUmQ__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FSos%20winegret.jpg?alt=media&token=39effb45-0437-418a-92ed-780b92478b49"
     },
     {
         "id": 34,
@@ -269,7 +269,7 @@
         "category": "dressing",
         "price": 4.0,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/fb91/67c4/76069c6982a04d56e1f8d04e5cbce634?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qWxF7ZR7qj-g-2LKZZT9S~6ZvaypnsdEPfSH2Ztlji6vCmk-04Z8WsiXiUcjq9H6S06Ooh8YFsL7WL8S4KcsvhV-9if1x0EwjR~m12YbDh2WY3f5z6mcpJEu3GbwAJ8KGSaMRrfze4P8LqKvEesVJEMPQL2lqBvwFLbLJ7ZRyxJDN7qpKUmxMpbWMlb-mqJGn6A5nCmGyzidbSN-6h9Rm-MGwGeMMfID61MSJiu8i3aNOmzwFc6X35cQmjzdJar-EJ-Wo8tjdhb1mVysz-9ecBZm~BrEA3PdMhxS5lRqJ2HH-JQsotFLfiMn2ecsPJx8IknXvkGkmMg4AIgtMKfheQ__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FSos%20sezamowy.jpg?alt=media&token=11891bd5-8dc7-4555-b340-cfaae794b14f"
     },
     {
         "id": 35,
@@ -277,7 +277,7 @@
         "category": "dressing",
         "price": 4.75,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/f1a12989446121a6728f56a91fd8ee67b524ca0c?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDressing%2FSos%20tahini.jpg?alt=media&token=eda3a279-b4b6-4ba7-8b4e-40712320bbc0"
     },
     {
         "id": 36,
@@ -285,7 +285,7 @@
         "category": "toppings",
         "price": 5.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/7fb2/a578/260d04bd91fe72d9a94393bf5105efd1?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Szm1b1FgubSTBiHP~1VtMDbksh3xoGtEBDJX2Zw7yKcsw0tON9QuXbuW0dKH-sTGQCCH-BDL~QC8jFHqewXzdpv0LquEPpItFTJTX4ZA7el~3bBZPi-8rsfLm9-fKm0Tfs4NekCMUfVfXTxA43g2lTgpchgPoHSWhoLNiw5pVFlaFJjAZICw9NsGcJik~6kf8ZzgyTxZ9L0YAfs0uSLgh8SkVPfzZtvRCoqzzAahzP0uWQJ7WZgam2cIG3yfBpXdNg-XwEg8AJMp3EX7kr1H7kOwxJ36j6iDiQOImGH9nsrlhAo5prEm7i-pKsnlaVB6QLtCsHHmVBalX-XazamcxQ__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FOrzechy%20w%C5%82oskie.jpg?alt=media&token=b3f7e561-238e-44c9-ac96-6c43809eb772"
     },
     {
         "id": 37,
@@ -293,7 +293,7 @@
         "category": "toppings",
         "price": 6.5,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/cc9d135df3d7b4078738b6cb35ea4b46011cdd09?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FOrzechy%20nerkowca.jpg?alt=media&token=b32c605a-2d53-40f2-b1ff-da9d979e45b2"
     },
     {
         "id": 38,
@@ -301,7 +301,7 @@
         "category": "toppings",
         "price": 4.25,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/0f75/430c/2e0d3efbb1ff44fbdfbc275b677f9c9c?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CZ57tMjLA8nzD~eUcdKMVW0s1ILLcgI3t4VVncARWYtACuMTFyszkgT-R9uUJfDjIn55fdq7VVmUzeK-MgY8namny2ReDU1HZVTSLAeahnv7oOkduorl1T2TsE9F3w2TFjsPyFaqcWiMu7muh5TpVBRU0JOqgFOZ~N99P9yEv1gMxSinzoIzbbFUKCa2du3nyYAwHmkm~e5HAfH8-ioZ~Wi-IZoJ0EDbz2QJvcX4Kt7j7veZ-1OOT~~esuwRzEOYxoLH2rTC6HfHQ0dh8qxvGy9j~um7FUQAOM8L76805inygUJQ9ZkW6dMcSzVEZE-MNPxdlq8QkEkx-G6Oadv3iw__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FNasiona%20s%C5%82onecznika.jpg?alt=media&token=0fdcebee-286c-457e-b799-7b00adc43ec3"
     },
     {
         "id": 39,
@@ -309,7 +309,7 @@
         "category": "toppings",
         "price": 3.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/ffbc/da03/b63ff2c3852e7575202a0c57ebbb6b02?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Sxzel4f-q6SuQ~QgH~h1oLw9RZMIyHh5RfeGjTCaiccn4WBMk-EmH-p3r3mDLVes7v0xUVZgv35H9OJkQ3yhmgZjl1cBkzj6clkJdoAB1cBjhWtQ8FoQHkl~45Vx60RoyqeM4OOdujbQFNdjeuYza2qt5RTo1q1mfu~A-KOPHTL1l4WeDf9IQEKRfs6UFE80nw2IKFDWja~kyeLBgC-5gRB3Vmg2ER1TQ3XrmMK46G4TqYgme0zNj62Ib8LtlUFSmt8o3IE1Qa0QIDtEt~5a1BzBZGZIX2DnEvhIU0nR4fWymErdP~~8-oHRshuTVFLw6BvZF1qu3BrQX4jxROxPWw__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FNasiona%20dyni.jpg?alt=media&token=74edb177-ba85-4a03-b47f-3ea7cc2d9bee"
     },
     {
         "id": 40,
@@ -317,7 +317,7 @@
         "category": "toppings",
         "price": 6.0,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/ad43bcfe71bd32d72acaee86142cc313709d0c83?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FSuszona%20z%CC%87urawina.jpg?alt=media&token=9aa8b8e2-5096-46b9-a325-5f7860721d91"
     },
     {
         "id": 41,
@@ -325,7 +325,7 @@
         "category": "toppings",
         "price": 7.5,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/57a83a82dbe5c731a0c4b4ab44308b4a838d0a03?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FSuszone%20morele.jpg?alt=media&token=9bcfdff8-cd3a-43c6-adb8-cabbd532e69d"
     },
     {
         "id": 42,
@@ -333,7 +333,7 @@
         "category": "toppings",
         "price": 4.25,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/f0be5997eb76522fc8d89369cac54e640eaca43d?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FPraz%CC%87one%20pestki%20dyni.jpg?alt=media&token=e4d55f9a-440f-4861-b00f-a3ca6af8bc4d"
     },
     {
         "id": 43,
@@ -341,7 +341,7 @@
         "category": "toppings",
         "price": 5.5,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/9cea/f03d/7e1583de9cc01cb4a14d2a7f324fb341?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oNs6UVcQNWeQnW2O1yfZ40cMRKXlu-m5ixS~U0-lqo1qR0oU9y3HmTGLOVZZ88PHYz03S1U3iwitUQ4RssPOctXkUSHQCit6Z58cP5wNgsRfrJoOJQI8m7S5naICfR3tsIYMAdOrzJ-1ORuF3pFRJ3V7NrKUvref1t6rDhV33yD0cXtXMLH06~8~ilKM68OmeMxicBZy28DXZ4DanZ2P3CiYJYGPlQQ5OmezVZTpzWUQ9kFDQK9SAIfu-ak~ksV62r5b1ED4L3iToJBK~4gtcmajjNhpYH~cY7nchWlJuCHpQtYPKZR9vJIOzRa1ioRtFpd3VyCEvRcmd-TJXUyEWQ__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FPokrojone%20oliwki.jpg?alt=media&token=b50df00b-b3ec-47db-89b5-245e836b3a2f"
     },
     {
         "id": 44,
@@ -349,7 +349,7 @@
         "category": "toppings",
         "price": 3.25,
         "imgSrc":
-            "https://www.figma.com/file/1ngHHeI9pqfdetlKhFIWxy/image/eb107b0d8c2789a46dade2a1dd6cb0d24aa0207d?fuid=951377600629151437"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FKapary.jpg?alt=media&token=51e0d891-30c4-419c-9dd6-830bc244d564"
     },
     {
         "id": 45,
@@ -357,6 +357,6 @@
         "category": "toppings",
         "price": 6.75,
         "imgSrc":
-            "https://s3-alpha-sig.figma.com/img/91af/5049/6fb2b911bc565b11ce3aa571acf0d95c?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b2h1WRG30x3c0vwf0vskBY70rpm3DIex3IgseNQZG0NA9naeQ9x2ce6UCdUdpYKY9WOmrdH1kI0OnmvqEawHIlvcfbVj06twz9PUGHgHfL0-sdi9xLaa3HupgrPer~zmCpJX0E-LIZMfmCMB7mplVMXuv8tHGphcMsNgjj1uToUBwMyzyrsTufmE8n~zuUr5YvjawN2LFw7MSnG6GdLR2pfFcaKL0fGvg~G-M5gkHMaKMFKyqydjyVKNQqF1YmdMK8Sln8xQHN98wGayz0W4~RnQZ4s2gJw6x9Gyf-62QY63hyI~R8R0wnOdeMwVc-5fplZUWFOJgkF5z8UuQFZ2Vg__"
+            "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FDodatki%2FSer%20mozzarella.jpg?alt=media&token=8c549f05-0f2c-4838-b43e-83ab35f1e5a3"
     }
 ]
