@@ -41,6 +41,10 @@ a.btn-link {
   color: inherit;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-display-large {
   font-size: 3.5625rem;
   font-weight: 500;
@@ -574,6 +578,79 @@ label {
 }
 .breadcrumbs ul li:last-child a {
   color: #17803b;
+}
+
+.configurator-main {
+  position: relative;
+  text-align: center;
+  padding: 4rem 0 6rem;
+  min-height: 56rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.configurator-main::before, .configurator-main::after {
+  position: absolute;
+  width: 16vw;
+  height: 100%;
+  background-size: 25vw auto;
+  background-repeat: no-repeat;
+}
+.configurator-main::before {
+  content: "";
+  left: 0;
+  background-image: url("/images/configurator-left-decor.png");
+  background-position: right;
+}
+.configurator-main::after {
+  content: "";
+  right: 0;
+  background-image: url("/images/configurator-right-decor.png");
+  background-position: left;
+}
+.configurator-main .wrapper {
+  max-width: 1000px;
+}
+.configurator-main h1 {
+  font-size: 3.5625rem;
+  font-weight: 500;
+  line-height: 112.281%;
+  letter-spacing: -0.01563rem;
+  margin: 0;
+}
+.configurator-main p {
+  margin: 1.5rem auto 3rem;
+}
+.configurator-main button {
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1260px) {
+  .configurator-main::before, .configurator-main::after {
+    width: 8vw;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .configurator-main {
+    min-height: inherit;
+    padding: 4rem 0 26rem;
+  }
+  .configurator-main h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 122.222%;
+  }
+  .configurator-main::before {
+    content: none;
+  }
+  .configurator-main::after {
+    background-image: url("/images/configurator-mobile-decor.png");
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 24rem;
+    background-size: cover;
+    background-position: top;
+  }
 }
 
 .contact-header {
