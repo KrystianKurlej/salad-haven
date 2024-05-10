@@ -71,15 +71,15 @@ export default createRouter({
     },
 		{
 			name: "Login",
-			path: "/login",
+			path: "/logowanie",
 			component: Login,
-			meta: {breadcrumb: "Login"},
+			meta: {breadcrumb: "Zaloguj się"},
 		},
 		{
 			name: "Register",
-			path: "/register",
+			path: "/rejestracja",
 			component: Register,
-			meta: {breadcrumb: "Register"},
+			meta: {breadcrumb: "Zarejestruj się"},
 		},
   ],
 });

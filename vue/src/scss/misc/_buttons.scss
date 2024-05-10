@@ -50,6 +50,20 @@ button,
 		background-color: inherit;
 	}
 
+	&.btn-link{
+		background-color: inherit;
+		padding: 0;
+		height: inherit;
+		@include text-body-small;
+		font-weight: 500;
+		color: $color-emerald-600;
+		text-decoration: underline;
+		
+		&,&:hover{
+			box-shadow: none;
+		}
+	}
+
 	&:hover {
 		box-shadow: $shadow-hover;
 

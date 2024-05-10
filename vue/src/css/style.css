@@ -210,6 +210,24 @@ button.btn-stroke,
   color: #000000;
   background-color: inherit;
 }
+button.btn-link,
+.button.btn-link {
+  background-color: inherit;
+  padding: 0;
+  height: inherit;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.00963rem;
+  font-weight: 500;
+  color: #17a34a;
+  text-decoration: underline;
+}
+button.btn-link, button.btn-link:hover,
+.button.btn-link,
+.button.btn-link:hover {
+  box-shadow: none;
+}
 button:hover,
 .button:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -336,7 +354,7 @@ button:active.btn-danger,
 
 input,
 textarea {
-  width: 100%;
+  width: calc(100% - 1rem);
   border-radius: 0.38rem;
   border: 1px solid #e5e7eb;
   font-size: 1rem;
@@ -578,6 +596,57 @@ label {
 }
 .breadcrumbs ul li:last-child a {
   color: #17803b;
+}
+
+#loginHeader,
+#registerHeader {
+  text-align: center;
+}
+#loginHeader h1,
+#registerHeader h1 {
+  padding: 2rem 0;
+  font-size: 2.8125rem;
+  font-weight: 500;
+  line-height: 115.556%;
+}
+@media only screen and (max-width: 768px) {
+  #loginHeader h1,
+  #registerHeader h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 122.222%;
+  }
+}
+
+#loginMain,
+#registerMain {
+  background-color: #f9fafb;
+  padding: 4rem 0;
+}
+#loginMain p,
+#registerMain p {
+  display: block;
+  margin: 0 0 0.3rem;
+}
+#loginMain .wrapper,
+#registerMain .wrapper {
+  max-width: 25rem;
+}
+#loginMain button.cta,
+#registerMain button.cta {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+#loginMain span,
+#registerMain span {
+  display: block;
+  margin-top: 0.625rem;
+  width: 100%;
+  text-align: center;
+}
+#loginMain #resetPassword,
+#registerMain #resetPassword {
+  justify-content: flex-end;
 }
 
 .configurator-main {
