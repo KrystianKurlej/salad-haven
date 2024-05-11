@@ -20,6 +20,8 @@
       </div>
     </div>
   </nav>
+   <!-- tutaj komponent koszyka -->
+   <!-- np. {showCart && <Cart />} -->
   <main>
     <router-view></router-view>
   </main>
@@ -61,6 +63,8 @@ import CartIco from '@components/icons/CartIco.vue';
 import FacebookIco from '@components/icons/FacebookIco.vue';
 import InstagramIco from '@components/icons/InstagramIco.vue';
 import TwitterIco from '@components/icons/TwitterIco.vue';
+
+// TODO:logika obsługi wyświetlania popupa koszyka
 
 // Konfiguracja Firebase
 const firebaseConfig = {
