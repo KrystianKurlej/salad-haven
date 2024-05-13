@@ -1,3 +1,6 @@
+'''
+Dodałem historię, zmieniłem account, logowanie. Nie umiem używać gita i nie ma zmian XDD
+'''
 <template>
   <div class="wrapper">
     <breadcrumbs></breadcrumbs>
