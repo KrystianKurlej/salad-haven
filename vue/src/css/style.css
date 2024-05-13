@@ -649,6 +649,70 @@ label {
   justify-content: flex-end;
 }
 
+.account-panel {
+  display: flex;
+  padding: 3.12rem 0;
+}
+.account-panel main {
+  width: 100%;
+}
+.account-panel main h1 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 122.222%;
+}
+
+.account-menu {
+  width: 20rem;
+}
+.account-menu .menu-list, .account-menu .menu-item, .account-menu .menu-divider {
+  width: 10rem;
+}
+.account-menu, .account-menu .menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.account-menu span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.00963rem;
+  color: #9ca3af;
+}
+.account-menu .menu-item {
+  margin-top: 0.25rem;
+  padding: 0 0.875rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  transition-duration: 150ms;
+}
+.account-menu .menu-item, .account-menu .menu-item button {
+  background-color: #f9fafb;
+  box-shadow: none;
+  height: 2.25rem;
+}
+.account-menu .menu-item:hover, .account-menu .menu-item button:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
+  box-shadow: none;
+  color: #22c55d;
+}
+.account-menu .menu-item.active, .account-menu .menu-item button.active {
+  background-color: #22c55d;
+  color: white;
+}
+.account-menu .menu-item button {
+  padding: 0;
+}
+.account-menu .menu-divider {
+  margin: 0.625rem 0;
+  display: block;
+  height: 1px;
+  background-color: #f3f4f6;
+}
+
 .configurator-main {
   position: relative;
   text-align: center;

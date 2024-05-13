@@ -1,212 +1,221 @@
 <template>
   <div class="wrapper">
     <breadcrumbs></breadcrumbs>
-    <h1>Moje konto</h1>
+    <div class="account-panel">
+      <nav class="account-menu">
+        <span>Panel klienta</span>
+        <ul class="menu-list">
+          <li class="menu-item active">Moje dane</li>
+          <li class="menu-item">
+            <router-link title="Historia zamówień" to="/historia-zamowien">Historia zamówień</router-link>
+          </li>
+          <span class="menu-divider"></span>
+          <li class="menu-item">
+            <button @click="logout">Wyloguj się</button>
+          </li>
+        </ul>
+      </nav>
 
-    <!-- Sekcja "Moje dane" -->
-    <button @click="navigateToHistory">Przejdź do historii zamówień</button>
-<!-- Przycisk wylogowania -->
-<button @click="logout">Wyloguj się</button>
-
-
-    <section v-if="currentUser">
-      <h2>Moje dane</h2>
-      <div v-if="!isEditingUserData">
-        <div>
-          <strong>Imię:</strong> {{ userData.firstName }}
-        </div>
-        <div>
-          <strong>Nazwisko:</strong> {{ userData.lastName }}
-        </div>
-        <div>
-          <strong>Adres e-mail:</strong> {{ userData.email }}
-        </div>
-        <div>
-          <strong>Telefon:</strong> {{ userData.phoneNumber }}
-        </div>
-        <button @click="startEditingUserData">Edytuj</button>
-        <button @click="confirmDeleteUserData">Usuń dane</button>
-      </div>
-      <div v-else>
-        <div>
-          <label for="firstName">Imię:</label>
-          <input type="text" id="firstName" v-model="userData.firstName" placeholder="Podaj imię">
-        </div>
-        <div>
-          <label for="lastName">Nazwisko:</label>
-          <input type="text" id="lastName" v-model="userData.lastName" placeholder="Podaj nazwisko">
-        </div>
-        <div>
-          <label for="email">Adres e-mail:</label>
-          <input type="email" id="email" v-model="userData.email" placeholder="Podaj adres e-mail">
-        </div>
-        <div>
-          <label for="phoneNumber">Telefon:</label>
-          <input type="tel" id="phoneNumber" v-model="userData.phoneNumber" placeholder="Podaj numer telefonu">
-        </div>
-        <button @click="saveUserData">Zapisz zmiany</button>
-        <button @click="cancelEditingUserData">Anuluj</button>
-      </div>
-    </section>
-
-    <!-- Sekcja "Dane firmy" -->
-    <section>
-      <h2>Dane firmy</h2>
-      <div v-if="!isEditingCompanyData">
-        <div>
-          <strong>Nazwa firmy:</strong> {{ companyData.companyName }}
-        </div>
-        <div>
-          <strong>NIP:</strong> {{ companyData.nip }}
-        </div>
-        <div>
-          <strong>Ulica:</strong> {{ companyData.street }}
-        </div>
-        <div>
-          <strong>Nr domu:</strong> {{ companyData.houseNumber }}
-        </div>
-        <div>
-          <strong>Nr lokalu:</strong> {{ companyData.apartmentNumber }}
-        </div>
-        <div>
-          <strong>Miasto:</strong> {{ companyData.city }}
-        </div>
-        <div>
-          <strong>Kod pocztowy:</strong> {{ companyData.postalCode }}
-        </div>
-        <button @click="startEditingCompanyData">Edytuj</button>
-        <button @click="confirmDeleteCompanyData">Usuń dane</button>
-      </div>
-      <div v-else>
-        <div>
-          <label for="companyName">Nazwa firmy:</label>
-          <input type="text" id="companyName" v-model="companyData.companyName" placeholder="Podaj nazwę firmy">
-        </div>
-        <div>
-          <label for="nip">NIP:</label>
-          <input type="text" id="nip" v-model="companyData.nip" placeholder="Podaj NIP">
-        </div>
-        <div>
-          <label for="street">Ulica:</label>
-          <input type="text" id="street" v-model="companyData.street" placeholder="Podaj ulicę">
-        </div>
-        <div>
-          <label for="houseNumber">Nr domu:</label>
-          <input type="text" id="houseNumber" v-model="companyData.houseNumber" placeholder="Podaj nr domu">
-        </div>
-        <div>
-          <label for="apartmentNumber">Nr lokalu:</label>
-          <input type="text" id="apartmentNumber" v-model="companyData.apartmentNumber" placeholder="Podaj nr lokalu">
-        </div>
-        <div>
-          <label for="city">Miasto:</label>
-          <input type="text" id="city" v-model="companyData.city" placeholder="Podaj miasto">
-        </div>
-        <div>
-          <label for="postalCode">Kod pocztowy:</label>
-          <input type="text" id="postalCode" v-model="companyData.postalCode" placeholder="Podaj kod pocztowy">
-        </div>
-        <button @click="saveCompanyData">Zapisz zmiany</button>
-        <button @click="cancelEditingCompanyData">Anuluj</button>
-      </div>
-    </section>
-
-    <!-- Sekcja "Dane kontaktowe" -->
-    <section>
-      <h2>Dane kontaktowe</h2>
-      <div v-if="!isEditingContactData">
-        <div>
-          <strong>Imię:</strong> {{ contactData.firstName }}
-        </div>
-        <div>
-          <strong>Nazwisko:</strong> {{ contactData.lastName }}
-        </div>
-        <div>
-          <strong>Adres:</strong> {{ contactData.address }}
-        </div>
-        <div>
-          <strong>Telefon:</strong> {{ contactData.phone }}
-        </div>
-        <div>
-          <strong>E-mail:</strong> {{ contactData.email }}
-        </div>
-        <button @click="startEditingContactData">Edytuj</button>
-        <button @click="confirmDeleteContactData">Usuń dane</button>
-      </div>
-      <div v-else>
-        <div>
-          <label for="firstName">Imię:</label>
-          <input type="text" id="firstName" v-model="contactData.firstName" placeholder="Podaj imię">
-        </div>
-        <div>
-          <label for="lastName">Nazwisko:</label>
-          <input type="text" id="lastName" v-model="contactData.lastName" placeholder="Podaj nazwisko">
-        </div>
-        <div>
-          <label for="address">Adres:</label>
-          <input type="text" id="address" v-model="contactData.address" placeholder="Podaj adres">
-        </div>
-        <div>
-          <label for="phone">Telefon:</label>
-          <input type="tel" id="phone" v-model="contactData.phone" placeholder="Podaj telefon">
-        </div>
-        <div>
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" v-model="contactData.email" placeholder="Podaj e-mail">
-        </div>
-        <button @click="saveContactData">Zapisz zmiany</button>
-        <button @click="cancelEditingContactData">Anuluj</button>
-      </div>
-    </section>
-
-    <!-- Sekcja "Adresy wysyłki" -->
-    <section>
-      <h2>Adresy wysyłki</h2>
-      <div>
-        <button @click="addShippingAddress">Dodaj adres wysyłki</button>
-      </div>
-      <div v-for="(address, index) in shippingAddresses" :key="index">
-        <div v-if="!address.isEditing">
-          <div>
-            <strong>Adres:</strong> {{ address.street }}, {{ address.houseNumber }}, {{ address.apartmentNumber }}, {{ address.city }}, {{ address.postalCode }}
+      <main>
+        <h1>Moje konto</h1>
+        
+        <section v-if="currentUser">
+          <h2>Moje dane</h2>
+          <div v-if="!isEditingUserData">
+            <div>
+              <strong>Imię:</strong> {{ userData.firstName }}
+            </div>
+            <div>
+              <strong>Nazwisko:</strong> {{ userData.lastName }}
+            </div>
+            <div>
+              <strong>Adres e-mail:</strong> {{ userData.email }}
+            </div>
+            <div>
+              <strong>Telefon:</strong> {{ userData.phoneNumber }}
+            </div>
+            <button @click="startEditingUserData">Edytuj</button>
+            <button @click="confirmDeleteUserData">Usuń dane</button>
           </div>
-          <button @click="editShippingAddress(index)">Edytuj</button>
-          <button @click="deleteShippingAddress(index)">Usuń</button>
-        </div>
-        <div v-else>
-          <div>
-            <label for="street">Ulica:</label>
-            <input type="text" v-model="address.street">
+          <div v-else>
+            <div>
+              <label for="firstName">Imię:</label>
+              <input type="text" id="firstName" v-model="userData.firstName" placeholder="Podaj imię">
+            </div>
+            <div>
+              <label for="lastName">Nazwisko:</label>
+              <input type="text" id="lastName" v-model="userData.lastName" placeholder="Podaj nazwisko">
+            </div>
+            <div>
+              <label for="email">Adres e-mail:</label>
+              <input type="email" id="email" v-model="userData.email" placeholder="Podaj adres e-mail">
+            </div>
+            <div>
+              <label for="phoneNumber">Telefon:</label>
+              <input type="tel" id="phoneNumber" v-model="userData.phoneNumber" placeholder="Podaj numer telefonu">
+            </div>
+            <button @click="saveUserData">Zapisz zmiany</button>
+            <button @click="cancelEditingUserData">Anuluj</button>
           </div>
-          <div>
-            <label for="houseNumber">Nr domu:</label>
-            <input type="text" v-model="address.houseNumber">
+        </section>
+
+        <!-- Sekcja "Dane firmy" -->
+        <section>
+          <h2>Dane firmy</h2>
+          <div v-if="!isEditingCompanyData">
+            <div>
+              <strong>Nazwa firmy:</strong> {{ companyData.companyName }}
+            </div>
+            <div>
+              <strong>NIP:</strong> {{ companyData.nip }}
+            </div>
+            <div>
+              <strong>Ulica:</strong> {{ companyData.street }}
+            </div>
+            <div>
+              <strong>Nr domu:</strong> {{ companyData.houseNumber }}
+            </div>
+            <div>
+              <strong>Nr lokalu:</strong> {{ companyData.apartmentNumber }}
+            </div>
+            <div>
+              <strong>Miasto:</strong> {{ companyData.city }}
+            </div>
+            <div>
+              <strong>Kod pocztowy:</strong> {{ companyData.postalCode }}
+            </div>
+            <button @click="startEditingCompanyData">Edytuj</button>
+            <button @click="confirmDeleteCompanyData">Usuń dane</button>
           </div>
-          <div>
-            <label for="apartmentNumber">Nr lokalu:</label>
-            <input type="text" v-model="address.apartmentNumber">
+          <div v-else>
+            <div>
+              <label for="companyName">Nazwa firmy:</label>
+              <input type="text" id="companyName" v-model="companyData.companyName" placeholder="Podaj nazwę firmy">
+            </div>
+            <div>
+              <label for="nip">NIP:</label>
+              <input type="text" id="nip" v-model="companyData.nip" placeholder="Podaj NIP">
+            </div>
+            <div>
+              <label for="street">Ulica:</label>
+              <input type="text" id="street" v-model="companyData.street" placeholder="Podaj ulicę">
+            </div>
+            <div>
+              <label for="houseNumber">Nr domu:</label>
+              <input type="text" id="houseNumber" v-model="companyData.houseNumber" placeholder="Podaj nr domu">
+            </div>
+            <div>
+              <label for="apartmentNumber">Nr lokalu:</label>
+              <input type="text" id="apartmentNumber" v-model="companyData.apartmentNumber" placeholder="Podaj nr lokalu">
+            </div>
+            <div>
+              <label for="city">Miasto:</label>
+              <input type="text" id="city" v-model="companyData.city" placeholder="Podaj miasto">
+            </div>
+            <div>
+              <label for="postalCode">Kod pocztowy:</label>
+              <input type="text" id="postalCode" v-model="companyData.postalCode" placeholder="Podaj kod pocztowy">
+            </div>
+            <button @click="saveCompanyData">Zapisz zmiany</button>
+            <button @click="cancelEditingCompanyData">Anuluj</button>
           </div>
-          <div>
-            <label for="city">Miasto:</label>
-            <input type="text" v-model="address.city">
+        </section>
+
+        <!-- Sekcja "Dane kontaktowe" -->
+        <section>
+          <h2>Dane kontaktowe</h2>
+          <div v-if="!isEditingContactData">
+            <div>
+              <strong>Imię:</strong> {{ contactData.firstName }}
+            </div>
+            <div>
+              <strong>Nazwisko:</strong> {{ contactData.lastName }}
+            </div>
+            <div>
+              <strong>Adres:</strong> {{ contactData.address }}
+            </div>
+            <div>
+              <strong>Telefon:</strong> {{ contactData.phone }}
+            </div>
+            <div>
+              <strong>E-mail:</strong> {{ contactData.email }}
+            </div>
+            <button @click="startEditingContactData">Edytuj</button>
+            <button @click="confirmDeleteContactData">Usuń dane</button>
           </div>
-          <div>
-            <label for="postalCode">Kod pocztowy:</label>
-            <input type="text" v-model="address.postalCode">
+          <div v-else>
+            <div>
+              <label for="firstName">Imię:</label>
+              <input type="text" id="firstName" v-model="contactData.firstName" placeholder="Podaj imię">
+            </div>
+            <div>
+              <label for="lastName">Nazwisko:</label>
+              <input type="text" id="lastName" v-model="contactData.lastName" placeholder="Podaj nazwisko">
+            </div>
+            <div>
+              <label for="address">Adres:</label>
+              <input type="text" id="address" v-model="contactData.address" placeholder="Podaj adres">
+            </div>
+            <div>
+              <label for="phone">Telefon:</label>
+              <input type="tel" id="phone" v-model="contactData.phone" placeholder="Podaj telefon">
+            </div>
+            <div>
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" v-model="contactData.email" placeholder="Podaj e-mail">
+            </div>
+            <button @click="saveContactData">Zapisz zmiany</button>
+            <button @click="cancelEditingContactData">Anuluj</button>
           </div>
-          <button @click="saveShippingAddress(index)">Zapisz zmiany</button>
-          <button @click="cancelEditingShippingAddress(index)">Anuluj</button>
-        </div>
+        </section>
+
+        <!-- Sekcja "Adresy wysyłki" -->
+        <section>
+          <h2>Adresy wysyłki</h2>
+          <div>
+            <button @click="addShippingAddress">Dodaj adres wysyłki</button>
+          </div>
+          <div v-for="(address, index) in shippingAddresses" :key="index">
+            <div v-if="!address.isEditing">
+              <div>
+                <strong>Adres:</strong> {{ address.street }}, {{ address.houseNumber }}, {{ address.apartmentNumber }}, {{ address.city }}, {{ address.postalCode }}
+              </div>
+              <button @click="editShippingAddress(index)">Edytuj</button>
+              <button @click="deleteShippingAddress(index)">Usuń</button>
+            </div>
+            <div v-else>
+              <div>
+                <label for="street">Ulica:</label>
+                <input type="text" v-model="address.street">
+              </div>
+              <div>
+                <label for="houseNumber">Nr domu:</label>
+                <input type="text" v-model="address.houseNumber">
+              </div>
+              <div>
+                <label for="apartmentNumber">Nr lokalu:</label>
+                <input type="text" v-model="address.apartmentNumber">
+              </div>
+              <div>
+                <label for="city">Miasto:</label>
+                <input type="text" v-model="address.city">
+              </div>
+              <div>
+                <label for="postalCode">Kod pocztowy:</label>
+                <input type="text" v-model="address.postalCode">
+              </div>
+              <button @click="saveShippingAddress(index)">Zapisz zmiany</button>
+              <button @click="cancelEditingShippingAddress(index)">Anuluj</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Komunikat toast -->
+      <div v-if="showToast" class="toast" :class="{ success: !isError, error: isError }">
+        <span>{{ toastMessage }}</span>
+        <button @click="showToast = false">X</button>
       </div>
-    </section>
-
-    <!-- Przycisk do nawigacji do widoku "History" -->
-
-
-    <!-- Komunikat toast -->
-    <div v-if="showToast" class="toast" :class="{ success: !isError, error: isError }">
-      <span>{{ toastMessage }}</span>
-      <button @click="showToast = false">X</button>
     </div>
   </div>
 </template>
