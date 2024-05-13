@@ -11,6 +11,7 @@ import Topings from "@views/Topings.vue";
 import Sum from "@views/Sum.vue";
 import Login from "@views/Login.vue";
 import Register from "@views/Register.vue";
+import history from "@views/history.vue";
 
 export default createRouter({
   history: createWebHistory(),
@@ -80,6 +81,12 @@ export default createRouter({
 			path: "/rejestracja",
 			component: Register,
 			meta: {breadcrumb: "Zarejestruj się"},
+		},
+    {
+			name: "history",
+			path: "/history",
+			component: history,
+			meta: {breadcrumb: "history"},
 		},
   ],
 });
