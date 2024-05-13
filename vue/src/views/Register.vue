@@ -14,6 +14,7 @@
           <label for="password">Hasło</label>
           <input name="password" type="password" placeholder="********" v-model="password"/>
         </p>
+
         <button-component size="large" variant="primary" class="cta">Zarejestruj się</button-component>
       </form>
 
@@ -47,4 +48,24 @@ const register = () => {
       alert(error.message);
     });
 };
+</script>
+=======
+const email = ref("");
+const password = ref("");
+const router = useRouter()
+const register = () => {
+createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+  .then((data) => {
+    console.log("Succesfully registered!");
+    router.push('/')
+  })
+  .catch((error) => {
+    console.log(error.code);
+    alert(error.message);
+  });
+
+};
+const signInWithGoogle = () => {
+
+}
 </script>

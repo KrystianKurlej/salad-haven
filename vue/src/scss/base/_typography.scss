@@ -33,6 +33,10 @@ a {
 	}
 }
 
+.text-center{
+	text-align: center;
+}
+
 @mixin text-display-large {
 	font-size: 3.5625rem;
 	font-weight: 500;

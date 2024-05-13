@@ -1,0 +1,77 @@
+.configurator-main{
+    position: relative;
+    text-align: center;
+    padding: 4rem 0 6rem;
+    min-height: 56rem;
+    @include flex-center;
+
+    &::before,
+    &::after {
+        position: absolute;
+        width: 16vw;
+        height: 100%;
+        background-size: 25vw auto;
+        background-repeat: no-repeat;
+    }
+
+    &::before {
+        content: "";
+        left: 0;
+        background-image: url('/images/configurator-left-decor.png');
+        background-position: right;
+    }
+
+    &::after {
+        content: "";
+        right: 0;
+        background-image: url('/images/configurator-right-decor.png');
+        background-position: left;
+    }
+
+    .wrapper{
+        max-width: 1000px;
+    }
+
+    h1{
+        @include text-display-large;
+        margin: 0;
+    }
+
+    p{
+        margin: 1.5rem auto 3rem;
+    }
+
+    button{
+        margin: 0 auto;
+    }
+
+    @include breakpoint(tab-land){
+        &::before,
+        &::after{
+            width: 8vw;
+        }
+    }
+
+    @include breakpoint(tab-port){
+        min-height: inherit;
+        padding: 4rem 0 26rem;
+
+        h1{
+            @include text-display-small;
+        }
+
+        &::before{
+            content: none;
+        }
+
+        &::after{
+            background-image: url('/images/configurator-mobile-decor.png');
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 24rem;
+            background-size: cover;
+            background-position: top;
+        }
+    }
+}

@@ -20,13 +20,13 @@
     </div>
 
     <div style="display: flex; justify-content: center;">
-      <router-link title="Konfigurator" to="/konfigurator" class="btn-link">
+      <router-link title="Baza sałatki" to="baza" class="btn-link">
         <button-component size="large" variant="secondary">
           <ArrowRightIco width="24" height="24" style="transform: rotate(180deg);"/>    
           Wstecz
         </button-component>
       </router-link>
-      <router-link title="Konfigurator" to="/konfigurator/proteins" class="btn-link">
+      <router-link title="Proteiny" to="proteiny" class="btn-link">
         <button-component v-if="selectedCount > 0" size="large" variant="secondary">
           Dalej 
           <ArrowRightIco width="24" height="24"/>
@@ -58,7 +58,7 @@
     },
     async created() {
       try {
-        const response = await fetch(API_URL + '/ingridients');
+        const response = await fetch(API_URL + '/ingredients');
         if (!response.ok) {
           throw new Error('API response was not ok');
         }
