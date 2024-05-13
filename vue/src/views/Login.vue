@@ -1,22 +1,33 @@
 <template>
-  <div class="wrapper">
+  <header class="wrapper" id="loginHeader">
+    <breadcrumbs></breadcrumbs>
     <h1>Zaloguj się</h1>
-    <div>
-      <label for="email">Adres e-mail:</label>
-      <input type="email" id="email" v-model="email" placeholder="Wprowadź adres e-mail">
+  </header>
+  <main id="loginMain">
+    <div class="wrapper">
+      <form @submit.prevent="login">
+        <p>
+          <label for="email">Adres e-mail:</label>
+          <input type="email" id="email" v-model="email" placeholder="Wprowadź adres e-mail">
+        </p>
+        <p>
+          <label for="password">Hasło:</label>
+          <input type="password" id="password" v-model="password" placeholder="Wprowadź hasło">
+        </p>
+        <button-component @click="resetPassword" variant="link" id="resetPassword">Zapomniałeś hasła?</button-component>
+        <button-component size="large" variant="primary" class="cta">Zaloguj się</button-component>
+      </form>
+
+      <span class="text-body-small">
+        Nie masz jeszcze konta? <router-link to="/rejestracja">Zarejestruj się</router-link>
+      </span>
+      
+      <div v-if="showToast" class="toast" :class="{ success: !isError, error: isError }">
+        <span>{{ toastMessage }}</span>
+        <button @click="showToast = false">X</button>
+      </div>
     </div>
-    <div>
-      <label for="password">Hasło:</label>
-      <input type="password" id="password" v-model="password" placeholder="Wprowadź hasło">
-    </div>
-    <button @click="login">Zaloguj się</button>
-    <router-link to="/register">Nie masz jeszcze konta? Zarejestruj się</router-link> <!-- Dodany link do rejestracji -->
-    <button @click="resetPassword">Zresetuj hasło</button> <!-- Dodany przycisk resetu hasła -->
-    <div v-if="showToast" class="toast" :class="{ success: !isError, error: isError }">
-      <span>{{ toastMessage }}</span>
-      <button @click="showToast = false">X</button>
-    </div>
-  </div>
+  </main>
 </template>
 
 <script setup>
