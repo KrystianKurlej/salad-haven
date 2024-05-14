@@ -71,6 +71,8 @@ const components = {
 };
 
 
+// TODO:logika obsługi wyświetlania popupa koszyka
+
 // Konfiguracja Firebase
 const firebaseConfig = {
  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
