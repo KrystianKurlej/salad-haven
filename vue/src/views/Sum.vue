@@ -116,7 +116,7 @@ import RightChevron from '@components/icons/RightChevron.vue';
 import CartIco from '@components/icons/CartIco.vue';
 
 import { ref, onMounted, computed } from 'vue';
-import axios from 'axios'; // Upewnij się, że biblioteka axios jest zainstalowana
+import axios from 'axios';
 
 // Deklaracja referencji do przechowywania nazw składników
 const selectedIngredientsData = ref([]);

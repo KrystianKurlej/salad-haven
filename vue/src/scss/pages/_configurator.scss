@@ -84,6 +84,40 @@
     }
 }
 
+.configurator-progress{
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid $color-black-200;
+
+    .current-price{
+        @include text-body-large;
+        color: $color-black-600;
+        margin: 0
+    }
+
+    h4{
+        margin: 0;
+        @include text-headline-large;
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.125rem 0.375rem;
+
+            &:nth-child(even) {
+                background-color: $color-black-100;
+                border-radius: .25rem;
+            }          
+        }
+    }
+}
+
 .configurator-summary{
     h2{
         @include text-headline-large;

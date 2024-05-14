@@ -36,6 +36,8 @@
             <p class="price">{{ i.price.toFixed(2) }} zł</p>
           </div>
         </div>
+
+        <ConfiguratorProgress />
       </div>
     </div>
   </div>
@@ -46,6 +48,7 @@
   import RightChevron from '@components/icons/RightChevron.vue';
   import Check from '@components/icons/Check.vue';
   import { API_URL } from '@src/main.js';
+  import ConfiguratorProgress from '../components/ConfiguratorProgress.vue';
 </script>
 
 <script>
