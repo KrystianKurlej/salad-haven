@@ -2,11 +2,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 4rem 0 8rem;
+
+    @include breakpoint(phone){
+        grid-template-columns: 1fr;
+        padding: 0 0 4rem;
+    }
 }
 
 .configurator-steps{
     padding-top: 1rem;
     padding-right: 4rem;
+
+    @include breakpoint(phone){
+        padding-right: 4vw;
+    }
 }
 
 .configurator-step{
@@ -35,12 +44,37 @@
         justify-content: flex-end;
         gap: .75rem;
     }
+
+    @include breakpoint(phone){
+        padding: 0;
+        display: none;
+
+        &.active{
+            display: block;
+        }
+
+        h1{
+            margin-left: .5rem;
+        }
+
+        .buttons{
+            margin-bottom: .75rem;
+
+            a{
+                width: 100%;
+            }
+        }
+    }
 }
 
 .configurator-ingredients{
     .ingredients{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+
+        @include breakpoint(phone){
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     .info-text{

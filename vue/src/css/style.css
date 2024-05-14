@@ -723,10 +723,21 @@ label {
   grid-template-columns: 1fr 1fr;
   padding: 4rem 0 8rem;
 }
+@media only screen and (max-width: 768px) {
+  .configurator-step-view {
+    grid-template-columns: 1fr;
+    padding: 0 0 4rem;
+  }
+}
 
 .configurator-steps {
   padding-top: 1rem;
   padding-right: 4rem;
+}
+@media only screen and (max-width: 768px) {
+  .configurator-steps {
+    padding-right: 4vw;
+  }
 }
 
 .configurator-step {
@@ -754,10 +765,33 @@ label {
   justify-content: flex-end;
   gap: 0.75rem;
 }
+@media only screen and (max-width: 768px) {
+  .configurator-step {
+    padding: 0;
+    display: none;
+  }
+  .configurator-step.active {
+    display: block;
+  }
+  .configurator-step h1 {
+    margin-left: 0.5rem;
+  }
+  .configurator-step .buttons {
+    margin-bottom: 0.75rem;
+  }
+  .configurator-step .buttons a {
+    width: 100%;
+  }
+}
 
 .configurator-ingredients .ingredients {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+@media only screen and (max-width: 768px) {
+  .configurator-ingredients .ingredients {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .configurator-ingredients .info-text {
   text-align: center;
