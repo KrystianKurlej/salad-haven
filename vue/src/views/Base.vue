@@ -1,35 +1,51 @@
 <template>
   <div class="wrapper">
-    <h1>Baza</h1>
-    <p>Wybrane składniki: {{ selectedCount }} / 1 </p>
-    <div v-for="ing in selectedIngs" :key="ing.id">
-      <p>{{ ing.name }}</p>
-    </div>
-  </div>
+    <breadcrumbs></breadcrumbs>
+    <div class="configurator-step-view">
+      <div class="configurator-steps">
+        <div class="configurator-step active">
+          <h1>
+            <RightChevron width="24" height="24" class="title-decor"/>
+            Wybierz bazę
+          </h1>
+          <p>Rozpocznij swoją sałatkę wybierając bazę - od świeżej mieszanki sałat po pełnoziarniste ryże lub makarony.</p>
+          <div class="buttons">
+            <router-link title="Owoce i warzywa" to="owoce-i-warzywa" class="btn-link">
+              <button-component size="large" :disabled="selectedCount < 1">
+                Dalej
+                <ArrowRightIco width="24" height="24"/>
+              </button-component>
+            </router-link>
+          </div>
+        </div>
+        <div class="configurator-step"><span>Owoce i warzywa</span></div>
+        <div class="configurator-step"><span>Proteiny</span></div>
+        <div class="configurator-step"><span>Dressing</span></div>
+        <div class="configurator-step"><span>Dodatki</span></div>
+        <div class="configurator-step"><span>Gotowe!</span></div>
+      </div>
+  
+      <div class="configurator-ingredients">
+        <p class="info-text">Wybierz maksymalnie 1 składnik</p>
 
-  <section id="employees" class="home-section">
-    <div class="slider">
-      <div class="employees">
-        <div v-for="i in filteredIngs" :key="i.id" class="employee-card" @click="toggleSelectedIngredient(i)">
-          <img :src="i.imgSrc" :alt="'Zdjęcie ' + i.name" :class="{ 'selected': isSelectedIngredient(i) }">
-          <h3 class="title">{{ i.name }}</h3>
-          <p class="role">{{ i.id }}</p>
+        <div class="ingredients">
+          <div v-for="i in filteredIngs" :key="i.id" class="ingredient-card" @click="toggleSelectedIngredient(i)">
+            <span class="checkmark" v-if="isSelectedIngredient(i)"><Check /></span>
+            <img :src="i.imgSrc" :alt="'Zdjęcie ' + i.name" />
+            <h3 class="title">{{ i.name }}</h3>
+            <p class="price">{{ i.price.toFixed(2) }} zł</p>
+          </div>
         </div>
       </div>
     </div>
-    <button-component v-if="selectedCount > 0" size="large" variant="secondary">
-    <router-link title="Owoce i warzywa" to="owoce-i-warzywa" class="btn-link">
-      Dalej
-      <ArrowRightIco width="24" height="24"/>
-    </router-link>
-  </button-component>
-  </section>
+  </div>
 </template>
 
 <script setup>
   import ArrowRightIco from '@components/icons/ArrowRightIco.vue';
+  import RightChevron from '@components/icons/RightChevron.vue';
+  import Check from '@components/icons/Check.vue';
   import { API_URL } from '@src/main.js';
-  import { useRouter } from 'vue-router';
 </script>
 
 <script>
@@ -91,16 +107,6 @@
     }
   }
 </script>
-
-<style scoped>
-  .employee-card {
-    cursor: pointer;
-  }
-  .employee-card img.selected {
-    border: 5px solid green;
-  }
-</style>
-
 
 
 

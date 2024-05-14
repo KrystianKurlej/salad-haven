@@ -228,6 +228,11 @@ button.btn-link, button.btn-link:hover,
 .button.btn-link:hover {
   box-shadow: none;
 }
+button.btn-disabled,
+.button.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 button:hover,
 .button:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -711,6 +716,103 @@ label {
   display: block;
   height: 1px;
   background-color: #f3f4f6;
+}
+
+.configurator-step-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 0 8rem;
+}
+
+.configurator-steps {
+  padding-top: 1rem;
+  padding-right: 4rem;
+}
+
+.configurator-step {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+}
+.configurator-step span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 133.333%;
+  color: #9ca3af;
+}
+.configurator-step h1 {
+  position: relative;
+}
+.configurator-step h1 .title-decor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -24px;
+  color: #22c55d;
+}
+.configurator-step .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.configurator-ingredients .ingredients {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.configurator-ingredients .info-text {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.00963rem;
+  color: #111827;
+}
+
+.configurator-summary h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 125%;
+}
+
+.ingredient-card {
+  position: relative;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.ingredient-card .checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #22c55d;
+  border-radius: 99px;
+  border: 1px solid white;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: white;
+}
+.ingredient-card img {
+  width: 100%;
+  margin-bottom: 0.125rem;
+  border-radius: 0.25rem;
+}
+.ingredient-card .title, .ingredient-card .price {
+  margin: 0;
+}
+.ingredient-card .title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: 0.00625rem;
+}
+.ingredient-card .price {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.00963rem;
+  color: #4b5563;
 }
 
 .configurator-main {

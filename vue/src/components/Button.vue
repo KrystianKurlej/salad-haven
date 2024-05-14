@@ -1,13 +1,13 @@
 <template>
-    <button :class="buttonClasses">
-       <slot></slot>
-    </button>
+  <button :class="buttonClasses" :disabled="disabled">
+    <slot></slot>
+  </button>
 </template>
-   
+
 <script>
 export default {
- name: 'button-component',
- props: {
+  name: 'button-component',
+  props: {
     size: {
       type: String,
       default: 'medium',
@@ -17,15 +17,20 @@ export default {
       type: String,
       default: 'primary',
       validator: value => ['primary', 'secondary', 'danger', 'stroke', 'link'].includes(value)
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
- },
- computed: {
+  },
+  computed: {
     buttonClasses() {
       return [
         `btn-${this.size}`,
-        `btn-${this.variant}`
+        `btn-${this.variant}`,
+        { 'btn-disabled': this.disabled } // Dodajemy klasę 'btn-disabled', jeśli przycisk jest wyłączony
       ];
     }
- }
+  }
 }
 </script>

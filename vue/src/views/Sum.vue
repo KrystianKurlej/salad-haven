@@ -1,37 +1,57 @@
 <template>
   <div class="wrapper">
-    <h1>Twoja sałatka to:</h1>
-    <ul>
-      <li v-if="selectedIngredients.length > 0">
-        <strong>Wybrane składniki:</strong>
+    <breadcrumbs></breadcrumbs>
+    <div class="configurator-step-view">
+      <div class="configurator-steps">
+        <div class="configurator-step"><span>Wybierz bazę</span></div>
+        <div class="configurator-step"><span>Owoce i warzywa</span></div>
+        <div class="configurator-step"><span>Proteiny</span></div>
+        <div class="configurator-step"><span>Dressing</span></div>
+        <div class="configurator-step"><span>Dodatki</span></div>
+        <div class="configurator-step active">
+          <h1>
+            <RightChevron width="24" height="24" class="title-decor"/>
+            Gotowe!
+          </h1>
+          <p>Teraz możesz cieszyć się swoją spersonalizowaną sałatką, która idealnie odpowiada Twoim preferencjom. Smacznego!</p>
+          <div class="buttons">
+            <router-link title="Dodatki" to="dodatki" class="btn-link">
+              <button-component size="large" variant="secondary">
+                Wróć
+              </button-component>
+            </router-link>
+            <button-component size="large">
+              Dodaj do koszyka
+              <CartIco width="24" height="24"/>
+            </button-component>
+          </div>
+        </div>
+      </div>
+      
+      <div class="configurator-summary">
+        <h2>Twoje zamówienie</h2>
         <ul>
-          <li v-for="ingredientId in selectedIngredients" :key="ingredientId">
-            {{ ingredientId }}
+          <li v-if="selectedIngredients.length > 0">
+            <strong>Wybrane składniki:</strong>
+            <ul>
+              <li v-for="ingredientId in selectedIngredients" :key="ingredientId">
+                {{ ingredientId }}
+              </li>
+            </ul>
+          </li>
+          <li v-else>
+            Brak wybranych składników.
           </li>
         </ul>
-      </li>
-      <li v-else>
-        Brak wybranych składników.
-      </li>
-    </ul>
-
-    
-    <button size="large" variant="secondary" @click="clearLocalStorage">Wyczyść localStorage i odśwież stronę</button> 
-    <!-- dodaj do koszyka to co mamy w tablicy 
-    i wyczyść locacl storage to trzeba to dorobić-->
-
-      <button-component  size="large" variant="secondary">
-    <router-link title="Konfigurator" to="/konfigurator/" class="btn-link">
-      Edytuj
-      <ArrowRightIco width="24" height="24"/>
-    </router-link>
-  </button-component>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import ArrowRightIco from '@components/icons/ArrowRightIco.vue';
 import { API_URL } from '@src/main.js';
+import RightChevron from '@components/icons/RightChevron.vue';
+import CartIco from '@components/icons/CartIco.vue';
 </script>
 
 <script>
