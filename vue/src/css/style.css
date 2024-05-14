@@ -41,6 +41,10 @@ a.btn-link {
   color: inherit;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-display-large {
   font-size: 3.5625rem;
   font-weight: 500;
@@ -206,6 +210,24 @@ button.btn-stroke,
   color: #000000;
   background-color: inherit;
 }
+button.btn-link,
+.button.btn-link {
+  background-color: inherit;
+  padding: 0;
+  height: inherit;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.00963rem;
+  font-weight: 500;
+  color: #17a34a;
+  text-decoration: underline;
+}
+button.btn-link, button.btn-link:hover,
+.button.btn-link,
+.button.btn-link:hover {
+  box-shadow: none;
+}
 button:hover,
 .button:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -332,7 +354,7 @@ button:active.btn-danger,
 
 input,
 textarea {
-  width: 100%;
+  width: calc(100% - 1rem);
   border-radius: 0.38rem;
   border: 1px solid #e5e7eb;
   font-size: 1rem;
@@ -946,6 +968,93 @@ label {
       transform: translateX(-100%);
     }
   }
+}
+
+.shopping-cart-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  max-width: 35%;
+  height: 50%;
+  max-height: 55%;
+  background-color: white;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.image-container {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-left: 10%; /* Adjust as needed */
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 90%;
+}
+
+.button_purch {
+  margin-top: 30px;
+  width: 100%;
+  height: 30px;
+}
+
+.button_purch2 {
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+}
+
+.empty_basket_text {
+  margin-top: 10px;
+  margin-left: 17px;
+}
+
+.container {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.thank-you {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.order-details {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.return_main {
+  background-color: #22c55d;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.return_main {
+  background-color: #22c55d;
 }
 
 /*# sourceMappingURL=style.css.map */

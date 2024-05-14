@@ -11,6 +11,7 @@ import Topings from "@views/Topings.vue";
 import Sum from "@views/Sum.vue";
 import Login from "@views/Login.vue";
 import Register from "@views/Register.vue";
+import SuccessPurch from '@views/SuccessPurch.vue';
 
 export default createRouter({
   history: createWebHistory(),
@@ -81,5 +82,17 @@ export default createRouter({
 			component: Register,
 			meta: {breadcrumb: "Zarejestruj się"},
 		},
+    {
+			name: "Order",
+			path: "/Order",
+			component: Register,
+			meta: {breadcrumb: "Zarejestruj się"},
+		},
+    {
+      name: "UdanyZakup",
+      path: "/udanyzakup",
+      component: SuccessPurch,
+      meta: { breadcrumb: "Koszyk - udany zakup!" },
+    },
   ],
 });
