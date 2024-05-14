@@ -49,23 +49,3 @@ const register = () => {
     });
 };
 </script>
-=======
-const email = ref("");
-const password = ref("");
-const router = useRouter()
-const register = () => {
-createUserWithEmailAndPassword(getAuth(), email.value, password.value)
-  .then((data) => {
-    console.log("Succesfully registered!");
-    router.push('/')
-  })
-  .catch((error) => {
-    console.log(error.code);
-    alert(error.message);
-  });
-
-};
-const signInWithGoogle = () => {
-
-}
-</script>

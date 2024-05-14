@@ -1,84 +1,171 @@
 <template>
   <div class="wrapper">
-    <h1>Twoja sałatka to:</h1>
-    <ul>
-      <li v-if="selectedIngredients.length > 0">
-        <strong>Wybrane składniki:</strong>
-        <ul>
-          <li v-for="ingredientId in selectedIngredients" :key="ingredientId">
-            {{ ingredientId }}
+    <breadcrumbs></breadcrumbs>
+    <div class="configurator-step-view">
+      <div class="configurator-steps">
+        <div class="configurator-step"><span>Wybierz bazę</span></div>
+        <div class="configurator-step"><span>Owoce i warzywa</span></div>
+        <div class="configurator-step"><span>Proteiny</span></div>
+        <div class="configurator-step"><span>Dressing</span></div>
+        <div class="configurator-step"><span>Dodatki</span></div>
+        <div class="configurator-step active">
+          <h1>
+            <RightChevron width="24" height="24" class="title-decor"/>
+            Gotowe!
+          </h1>
+          <p>Teraz możesz cieszyć się swoją spersonalizowaną sałatką, która idealnie odpowiada Twoim preferencjom. Smacznego!</p>
+          <div class="buttons">
+            <router-link title="Dodatki" to="dodatki" class="btn-link">
+              <button-component size="large" variant="secondary">
+                Wróć
+              </button-component>
+            </router-link>
+            <button-component size="large">
+              Dodaj do koszyka
+              <CartIco width="24" height="24"/>
+            </button-component>
+          </div>
+        </div>
+      </div>
+      
+      <div class="configurator-summary">
+        <h2>Twoje zamówienie</h2>
+
+        <div class="summary-pictures">
+            <div class="category-images" v-for="(ingredient, index) in selectedIngredientsData" :key="index">
+              <img :key="index" :src="ingredient.imgSrc" :alt="ingredient.name" />
+            </div>
+            <div class="category-images" v-for="(ingredient, index) in selectedVegetablesData" :key="index">
+              <img :key="index" :src="ingredient.imgSrc" :alt="ingredient.name" />
+            </div>
+            <div class="category-images" v-for="(ingredient, index) in selectedProteinsData" :key="index">
+              <img :key="index" :src="ingredient.imgSrc" :alt="ingredient.name" />
+            </div>
+            <div class="category-images" v-for="(ingredient, index) in selectedDressingsData" :key="index">
+              <img :key="index" :src="ingredient.imgSrc" :alt="ingredient.name" />
+            </div>
+            <div class="category-images" v-for="(ingredient, index) in selectedToppingsData" :key="index">
+              <img :key="index" :src="ingredient.imgSrc" :alt="ingredient.name" />
+            </div>
+        </div>
+
+        <div class="ingredient-category-header">
+          <span class="ingredient-category-title">Baza</span>
+          <router-link to="baza" title="Baza">edytuj</router-link>
+        </div>
+        <ul class="ingredient-category">
+          <li class="ingredient-item" v-for="(ingredient, index) in selectedIngredientsData" :key="index">
+            <span>{{ ingredient.name }}</span>
+            <span>{{ ingredient.price.toFixed(2) }} zł</span>
           </li>
         </ul>
-      </li>
-      <li v-else>
-        Brak wybranych składników.
-      </li>
-    </ul>
-
-    
-    <button size="large" variant="secondary" @click="clearLocalStorage">Wyczyść localStorage i odśwież stronę</button> 
-    <!-- dodaj do koszyka to co mamy w tablicy 
-    i wyczyść locacl storage to trzeba to dorobić-->
-
-      <button-component  size="large" variant="secondary">
-    <router-link title="Konfigurator" to="/konfigurator/" class="btn-link">
-      Edytuj
-      <ArrowRightIco width="24" height="24"/>
-    </router-link>
-  </button-component>
+        <div class="ingredient-category-header">
+          <span class="ingredient-category-title">Owoce i warzywa</span>
+          <router-link to="owoce-i-warzywa" title="Owoce i warzywa">edytuj</router-link>
+        </div>
+        <ul class="ingredient-category">
+          <li class="ingredient-item" v-for="(ingredient, index) in selectedVegetablesData" :key="index">
+            <span>{{ ingredient.name }}</span>
+            <span>{{ ingredient.price.toFixed(2) }} zł</span>
+          </li>
+        </ul>
+        <div class="ingredient-category-header">
+          <span class="ingredient-category-title">Proteiny</span>
+          <router-link to="proteiny" title="Proteiny">edytuj</router-link>
+        </div>
+        <ul class="ingredient-category">
+          <li class="ingredient-item" v-for="(ingredient, index) in selectedProteinsData" :key="index">
+            <span>{{ ingredient.name }}</span>
+            <span>{{ ingredient.price.toFixed(2) }} zł</span>
+          </li>
+        </ul>
+        <div class="ingredient-category-header">
+          <span class="ingredient-category-title">Dressing</span>
+          <router-link to="dressing" title="Dressing">edytuj</router-link>
+        </div>
+        <ul class="ingredient-category">
+          <li class="ingredient-item" v-for="(ingredient, index) in selectedDressingsData" :key="index">
+            <span>{{ ingredient.name }}</span>
+            <span>{{ ingredient.price.toFixed(2) }} zł</span>
+          </li>
+        </ul>
+        <div class="ingredient-category-header">
+          <span class="ingredient-category-title">Dodatki</span>
+          <router-link to="dodatki" title="Dodatki">edytuj</router-link>
+        </div>
+        <ul class="ingredient-category">
+          <li class="ingredient-item" v-for="(ingredient, index) in selectedToppingsData" :key="index">
+            <span>{{ ingredient.name }}</span>
+            <span>{{ ingredient.price.toFixed(2) }} zł</span>
+          </li>
+        </ul>
+        <div class="salad-price">
+          <span>Suma</span>
+          <span class="price-sum">
+            {{ totalPrice.toFixed(2) }} zł
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import ArrowRightIco from '@components/icons/ArrowRightIco.vue';
 import { API_URL } from '@src/main.js';
-</script>
+import RightChevron from '@components/icons/RightChevron.vue';
+import CartIco from '@components/icons/CartIco.vue';
 
-<script>
-export default {
-  data() {
-    return {
-      localStorage: window.localStorage
-    };
-  },
-  async created() {
+import { ref, onMounted, computed } from 'vue';
+import axios from 'axios';
+
+// Deklaracja referencji do przechowywania nazw składników
+const selectedIngredientsData = ref([]);
+const selectedVegetablesData = ref([]);
+const selectedProteinsData = ref([]);
+const selectedDressingsData = ref([]);
+const selectedToppingsData = ref([]);
+
+// Pobierz wartości z localStorage
+const selectedVegetables = JSON.parse(localStorage.getItem('selectedVegetables')) || [];
+const selectedIngredients = JSON.parse(localStorage.getItem('selectedIngredients')) || [];
+const selectedDressings = JSON.parse(localStorage.getItem('selectedDressings')) || [];
+const selectedProteins = JSON.parse(localStorage.getItem('selectedProteins')) || [];
+const selectedToppings = JSON.parse(localStorage.getItem('selectedToppings')) || [];
+
+// Funkcja do pobierania danych składników z API na podstawie ich identyfikatorów
+const fetchIngredientData = async (category, ids) => {
+  const data = [];
+  if (Array.isArray(ids)) {
+    for (const id of ids) {
       try {
-        const response = await fetch(API_URL + '/ingredients');
-        if (!response.ok) {
-          throw new Error('API response was not ok');
-        }
-        const data = await response.json();
-        this.ings = data;
-
-        const selectedIngIds = JSON.parse(localStorage.getItem('selectedIngredients') || '[]');
-        this.selectedIngs = this.ings.filter(ing => selectedIngIds.includes(ing.id));
-        this.selectedCount = this.selectedIngs.length;
+        const response = await axios.get(`${API_URL}/ingredients/${id}`);
+        const ingredientData = response.data;
+        data.push(ingredientData);
       } catch (error) {
-        console.error('Problem z pobieraniem danych o Sałatkach: ', error)
+        console.error(`Failed to fetch ingredient with id ${id}:`, error);
       }
-    },
-  computed: {
-    selectedIngredients() {
-      // Pobranie wszystkich kluczy localStorage i sprawdzenie, czy rozpoczynają się od "selected"
-      const keys = Object.keys(this.localStorage);
-      const selectedKeys = keys.filter(key => key.startsWith('selected'));
-      // Pobranie wartości (czyli listy składników) dla każdego klucza
-      const selectedIngredients = selectedKeys.flatMap(key => JSON.parse(this.localStorage.getItem(key) || '[]'));
-      return selectedIngredients;
-    }
-  },
-  methods: {
-    clearLocalStorage() {
-      localStorage.clear();
-      this.refreshPage();
-    },
-    refreshPage() {
-      window.location.reload();
     }
   }
+  return data;
 };
-</script>
 
-<style>
-/* Stylizacja komponentu */
-</style>
+// Funkcja do ustawiania nazw składników w odpowiednich referencjach
+const setIngredientNames = async () => {
+  selectedIngredientsData.value = await fetchIngredientData('ingredients', selectedIngredients);
+  selectedVegetablesData.value = await fetchIngredientData('vegetables', selectedVegetables);
+  selectedProteinsData.value = await fetchIngredientData('proteins', selectedProteins);
+  selectedDressingsData.value = await fetchIngredientData('dressings', selectedDressings);
+  selectedToppingsData.value = await fetchIngredientData('toppings', selectedToppings);
+};
+
+const totalPrice = computed(() => {
+  const allIngredients = [...selectedIngredientsData.value, ...selectedVegetablesData.value, ...selectedProteinsData.value, ...selectedDressingsData.value, ...selectedToppingsData.value];
+  return allIngredients.reduce((sum, ingredient) => sum + ingredient.price, 0);
+});
+
+// Wywołanie funkcji setIngredientNames() po zamontowaniu komponentu
+onMounted(() => {
+  setIngredientNames();
+});
+
+</script>

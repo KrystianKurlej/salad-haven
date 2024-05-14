@@ -1,45 +1,59 @@
 <template>
-    <div class="wrapper">
-      <h1>Posypywania</h1>
-    </div>
-   
-    <p>Wybrane składniki: {{ selectedCount }} / 2 </p>
-      <div v-for="ing in selectedIngs" :key="ing.id">
-        <p>{{ ing.name }}</p>
-      </div>
-  
-    <section id="employees" class="home-section">
-      <div class="slider">
-        <div class="employees">
-          <div v-for="i in filteredIngs" :key="i.id" class="employee-card" @click="toggleSelectedIngredient(i)">
-            <img :src="i.imgSrc" :alt="'Zdjęcie ' + i.name" :class="{ 'selected': isSelectedIngredient(i) }">
-            <h3 class="title">{{ i.name }}</h3>
-            <p class="role">{{ i.id }}</p>
+  <div class="wrapper">
+    <breadcrumbs></breadcrumbs>
+    <div class="configurator-step-view">
+      <div class="configurator-steps">
+        <div class="configurator-step"><span>Wybierz bazę</span></div>
+        <div class="configurator-step"><span>Owoce i warzywa</span></div>
+        <div class="configurator-step"><span>Proteiny</span></div>
+        <div class="configurator-step"><span>Dressing</span></div>
+        <div class="configurator-step active">
+          <h1>
+            <RightChevron width="24" height="24" class="title-decor"/>
+            Dodatki
+          </h1>
+          <p>Dodaj ostatnie akcenty do swojej sałatki - wybierz spośród prażonych nasion, suszonych owoców lub aromatycznych ziół, aby nadać jej wyjątkowego charakteru.</p>
+          <div class="buttons">
+            <router-link title="Dressing" to="dressing" class="btn-link">
+              <button-component size="large" variant="secondary">
+                Wróć
+              </button-component>
+            </router-link>
+            <router-link title="Podsumowanie" to="podsumowanie" class="btn-link">
+              <button-component size="large" :disabled="selectedCount < 1">
+                Dalej
+                <ArrowRightIco width="24" height="24"/>
+              </button-component>
+            </router-link>
           </div>
         </div>
+        <div class="configurator-step"><span>Gotowe!</span></div>
       </div>
-  
-      <div style="display: flex; justify-content: center;">
-        <router-link title="Dressing" to="dressing" class="btn-link">
-          <button-component size="large" variant="secondary">
-            <ArrowRightIco width="24" height="24" style="transform: rotate(180deg);"/>    
-            Wstecz
-          </button-component>
-        </router-link>
-        <router-link title="Podsumowanie" to="podsumowanie" class="btn-link">
-          <button-component v-if="selectedCount > 0" size="large" variant="secondary">
-            Dalej 
-            <ArrowRightIco width="24" height="24"/>
-          </button-component>
-        </router-link>
+
+      <div class="configurator-ingredients">
+        <p class="info-text">Wybierz maksymalnie 1 składnik</p>
+
+        <div class="ingredients">
+          <div v-for="i in filteredIngs" :key="i.id" class="ingredient-card" @click="toggleSelectedIngredient(i)">
+            <span class="checkmark" v-if="isSelectedIngredient(i)"><Check /></span>
+            <img :src="i.imgSrc" :alt="'Zdjęcie ' + i.name" />
+            <h3 class="title">{{ i.name }}</h3>
+            <p class="price">{{ i.price.toFixed(2) }} zł</p>
+          </div>
+        </div>
+
+        <ConfiguratorProgress />
       </div>
-    </section>
-  </template>
+    </div>
+  </div>
+</template>
   
   <script setup>
     import ArrowRightIco from '@components/icons/ArrowRightIco.vue';
     import { API_URL } from '@src/main.js';
-    import { useRouter } from 'vue-router';
+    import RightChevron from '@components/icons/RightChevron.vue';
+    import Check from '@components/icons/Check.vue';
+    import ConfiguratorProgress from '../components/ConfiguratorProgress.vue';
   </script>
   
   <script>
@@ -97,13 +111,3 @@
       }
     }
   </script>
-  
-  <style scoped>
-    .employee-card {
-      cursor: pointer;
-    }
-    .employee-card img.selected {
-      border: 5px solid green;
-    }
-  </style>
-  

@@ -84,9 +84,9 @@ export default createRouter({
 		},
     {
 			name: "history",
-			path: "/history",
+			path: "/historia-zamowien",
 			component: history,
-			meta: {breadcrumb: "history"},
+			meta: {breadcrumb: "Historia zamówień"},
 		},
   ],
 });
