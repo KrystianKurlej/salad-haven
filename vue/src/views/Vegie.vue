@@ -136,14 +136,3 @@
     }
   }
 </script>
-
-<style scoped>
-  .employee-card {
-    cursor: pointer;
-  }
-  .employee-card img.selected {
-    border: 5px solid green;
-  }
-</style>
-
- 

@@ -54,6 +54,64 @@
     h2{
         @include text-headline-large;
     }
+
+    .summary-pictures{
+        width: 100%;
+        border-radius: 0.25rem;
+        overflow: hidden;
+        margin: .75rem 0;
+
+        &,.category-images{
+            display: flex;
+            gap: 0;
+        }
+
+        img{
+            width: 100%;
+            height: 7.875rem;
+            object-fit: cover
+        }
+    }
+
+    .ingredient-category-title{
+        @include text-label-medium;
+        color: $color-black-500;
+        margin: 0;
+    }
+
+    .ingredient-category-header,
+    .ingredient-item{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ingredient-category-header{
+        margin: .25rem 0;
+
+        a{
+            color: $color-black-500;
+        }
+    }
+
+    .ingredient-category{
+        margin: 0;
+        list-style-type: none;
+        padding: 0.25rem 0;
+        border-bottom: 1px solid $color-black-200;
+    }
+
+    .salad-price{
+        padding: .75rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .price-sum{
+            @include text-title-medium;
+        }
+    }
 }
 
 .ingredient-card{
