@@ -89,6 +89,7 @@ export default createRouter({
       component: SuccessPurch,
       meta: { breadcrumb: "Koszyk - udany zakup!" },
     },
+    {
 			name: "history",
 			path: "/historia-zamowien",
 			component: history,
