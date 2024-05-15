@@ -1,6 +1,122 @@
 [
   {
     "clientId": "k1mVaTPjvaMZpGlXGMYWu8HinhV2",
-    "history": []
+    "history": [
+      {
+        "date": "2024-05-15",
+        "products": [
+          {
+            "id": 1,
+            "status": "new",
+            "title": "Sałatka Liście sałaty",
+            "shortDescription": "Liście sałaty\nPapryka czerwona\nSos pomidorowy\nTofu",
+            "price": 32.75,
+            "thumbnailUrl": "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FLis%CC%81cie%20sa%C5%82aty.jpg?alt=media&token=f836f4bd-38a5-447c-8a10-f3a8d877ebbd"
+          }
+        ],
+        "orderId": 1
+      },
+      {
+        "date": "2024-05-15",
+        "products": [
+          {
+            "id": 1,
+            "status": "new",
+            "title": "Sałatka Rukola",
+            "shortDescription": "Rukola\nPapryka czerwona\nSos pomidorowy\nTofu",
+            "price": 34.25,
+            "thumbnailUrl": "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FRukola.jpg?alt=media&token=8ee50ea8-66eb-4b20-b115-65b8ed964587"
+          }
+        ],
+        "orderId": 2
+      },
+      {
+        "date": "2024-05-15",
+        "products": [
+          {
+            "id": 1,
+            "status": "new",
+            "title": "Sałatka Rukola",
+            "shortDescription": "Rukola\nPapryka czerwona\nPomidory\nOgórki\nSos pomidorowy\nTofu",
+            "price": 34.25,
+            "thumbnailUrl": {}
+          }
+        ],
+        "orderId": 3
+      },
+      {
+        "date": "2024-05-15",
+        "products": [
+          {
+            "id": 1,
+            "status": "new",
+            "title": "Sałatka Rukola",
+            "shortDescription": "Rukola\nPapryka czerwona\nPomidory\nOgórki\nSos pomidorowy\nTofu",
+            "price": 34.25,
+            "thumbnailUrl": {}
+          }
+        ],
+        "orderId": 4
+      },
+      {
+        "date": "2024-05-15",
+        "products": [
+          {
+            "id": 1,
+            "status": "new",
+            "title": "Sałatka Rukola",
+            "shortDescription": "Rukola\nPapryka czerwona\nPomidory\nOgórki\nSos pomidorowy\nTofu",
+            "price": 34.25,
+            "thumbnailUrl": "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FRukola.jpg?alt=media&token=8ee50ea8-66eb-4b20-b115-65b8ed964587"
+          }
+        ],
+        "orderId": 5
+      },
+      {
+        "date": "2024-05-15",
+        "products": [
+          {
+            "id": 1,
+            "status": "new",
+            "title": "Sałatka Rukola",
+            "shortDescription": "Rukola\nPapryka czerwona\nPomidory\nOgórki\nSos pomidorowy\nTofu",
+            "price": 34.25,
+            "thumbnailUrl": "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FRukola.jpg?alt=media&token=8ee50ea8-66eb-4b20-b115-65b8ed964587"
+          },
+          {
+            "id": 2,
+            "status": "new",
+            "title": "Sałatka Makaron pełnoziarnisty",
+            "shortDescription": "Makaron pełnoziarnisty\nPapryka czerwona\nPomidory\nOgórki\nSos pomidorowy\nTofu",
+            "price": 35.75,
+            "thumbnailUrl": "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FMakaron%20pe%C5%82noziarnisty.jpg?alt=media&token=1f0fffa4-6c3b-4936-9f17-3ff4b38969cc"
+          }
+        ],
+        "orderId": 6
+      },
+      {
+        "date": "2024-05-15",
+        "products": [
+          {
+            "id": 1,
+            "status": "new",
+            "title": "Sałatka Rukola",
+            "shortDescription": "Rukola\nPapryka czerwona\nPomidory\nOgórki\nSos pomidorowy\nTofu",
+            "price": 34.25,
+            "thumbnailUrl": "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FRukola.jpg?alt=media&token=8ee50ea8-66eb-4b20-b115-65b8ed964587"
+          },
+          {
+            "id": 2,
+            "status": "new",
+            "title": "Sałatka Makaron pełnoziarnisty",
+            "shortDescription": "Makaron pełnoziarnisty\nPapryka czerwona\nPomidory\nOgórki\nSos pomidorowy\nTofu",
+            "price": 35.75,
+            "thumbnailUrl": "https://firebasestorage.googleapis.com/v0/b/bogateai.appspot.com/o/Sk%C5%82adniki%2FBaza%2FMakaron%20pe%C5%82noziarnisty.jpg?alt=media&token=1f0fffa4-6c3b-4936-9f17-3ff4b38969cc"
+          }
+        ],
+        "orderId": 7
+      }
+    ],
+    "lastOrderId": 7
   }
 ]

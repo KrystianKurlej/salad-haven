@@ -38,7 +38,7 @@
         </div>
       </div>
       <!-- Purchase Buttons -->
-      <button-component @click="closePopupAndNavigate('/udanyzakup/')">Przejdź do zamówienia</button-component>
+      <button-component @click="purchaseCart('/udanyzakup/')">Przejdź do zamówienia</button-component>
       <button-component variant="secondary" @click="toggleShoppingCart">Kontynuuj zakupy</button-component>
     </div>
   </div>
@@ -52,7 +52,7 @@ import CartIco from '@components/icons/CartIco.vue';
 import Magnifier from '@components/icons/Magnifier.vue';
 import Cancel from '@components/icons/Cancel.vue';
 import Trash from '@components/icons/Trash.vue';
-// import { API_URL } from '@src/main.js';
+// import { API_URL } from '@src/main.js'; nie wiem dlaczego to nie działa
 const API_URL = 'http://localhost:3000';
 
 const cart = ref([]);
@@ -97,13 +97,49 @@ onMounted(() => {
 const isShoppingCartVisible = ref(false);
 
 const toggleShoppingCart = () => {
-  isShoppingCartVisible.value =!isShoppingCartVisible.value;
+  isShoppingCartVisible.value = !isShoppingCartVisible.value;
 };
 
 const router = useRouter();
-const closePopupAndNavigate = (path) => {
-  isShoppingCartVisible.value = false;
-  router.push(path);
+
+const purchaseCart = async (path) => {
+  const clientId = localStorage.getItem('uid');
+  
+  if (!clientId) {
+    console.error('Client ID is missing');
+    return;
+  }
+
+  const newOrder = {
+    date: new Date().toISOString().split('T')[0],
+    products: cart.value.map(item => {
+      const ingredientsNames = item.ingredients.map(id => getIngredientData(id)?.name ?? '').join('\n');
+      const vegetablesNames = item.vegetables.map(id => getIngredientData(id)?.name ?? '').join('\n');
+      const dressingsNames = item.dressings.map(id => getIngredientData(id)?.name ?? '').join('\n');
+      const proteinsNames = item.proteins.map(id => getIngredientData(id)?.name ?? '').join('\n');
+
+      return {
+        id: item.id,
+        status: "new",
+        title: `Sałatka ${ingredientsNames}`,
+        shortDescription: `${ingredientsNames}\n${vegetablesNames}\n${dressingsNames}\n${proteinsNames}`,
+        price: item.totalPrice,
+        thumbnailUrl: getIngredientData(item.ingredients[0]).imgSrc
+      };
+    })
+  };
+
+  fetch(`${API_URL}/orderHistory/${clientId}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newOrder)
+  })
+
+  toggleShoppingCart();
+  localStorage.removeItem('cart');
+  router.push('/udanyzakup')
 };
 
 const removeFromCart = (id) => {
