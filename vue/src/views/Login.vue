@@ -39,6 +39,7 @@ let auth;
 const email = ref('');
 const password = ref('');
 const showToast = ref(false);
+const toastMessage = ref('');
 
 const router = useRouter();
 
@@ -46,7 +47,9 @@ auth = getAuth();
 
 const login = () => {
   signInWithEmailAndPassword(auth, email.value, password.value)
-    .then(() => {
+    .then((userCredential) => {
+      const user = userCredential.user;
+      localStorage.setItem('uid', user.uid);
       router.push('/konto')
     })
     .catch((error) => {

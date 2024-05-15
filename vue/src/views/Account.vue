@@ -417,6 +417,7 @@ const auth = getAuth();
 
 const logout = () => {
   signOut(auth).then(() => {
+    localStorage.removeItem('uid');
     router.push('/logowanie')
     console.log('Użytkownik wylogowany.');
   }).catch((error) => {
