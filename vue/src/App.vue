@@ -12,7 +12,7 @@
         </ul>
         <ul class="icons-menu-list">
           <li class="menu-item-icon"><router-link title="Konto" :to="isLoggedIn ? '/konto' : '/logowanie'"><AccountIco width="24" height="24" /></router-link></li>
-          <li class="menu-item-icon"><CartIco width="24" height="24" /></li>
+          <ShoppingCart></ShoppingCart>
         </ul>
         <button class="mobile-btn" @click="toggleMenu">
           <div :class="{ 'hamburger-icon': true, 'active': isMenuActive }"></div>
@@ -20,6 +20,9 @@
       </div>
     </div>
   </nav>
+  <!-- komponent koszyka-->
+  
+  
   <main>
     <router-view></router-view>
   </main>
@@ -57,10 +60,18 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 import Logo from '@components/Logo.vue';
 import AccountIco from '@components/icons/AccountIco.vue';
-import CartIco from '@components/icons/CartIco.vue';
 import FacebookIco from '@components/icons/FacebookIco.vue';
 import InstagramIco from '@components/icons/InstagramIco.vue';
 import TwitterIco from '@components/icons/TwitterIco.vue';
+import ShoppingCart from "@components/shoppingCart.vue";
+
+// Eksport Koszyka
+const components = {
+  ShoppingCart
+};
+
+
+// TODO:logika obsługi wyświetlania popupa koszyka
 
 // Konfiguracja Firebase
 const firebaseConfig = {
@@ -95,4 +106,7 @@ onMounted(() => {
     isLoggedIn.value = !!user; // Zmiana: Ustawia wartość na true, jeśli użytkownik jest zalogowany
  });
 });
+
+
 </script>
+

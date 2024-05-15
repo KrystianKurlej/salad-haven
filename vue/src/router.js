@@ -11,6 +11,7 @@ import Topings from "@views/Topings.vue";
 import Sum from "@views/Sum.vue";
 import Login from "@views/Login.vue";
 import Register from "@views/Register.vue";
+import SuccessPurch from '@views/SuccessPurch.vue';
 import history from "@views/history.vue";
 
 export default createRouter({
@@ -83,6 +84,11 @@ export default createRouter({
 			meta: {breadcrumb: "Zarejestruj się"},
 		},
     {
+      name: "UdanyZakup",
+      path: "/udanyzakup",
+      component: SuccessPurch,
+      meta: { breadcrumb: "Koszyk - udany zakup!" },
+    },
 			name: "history",
 			path: "/historia-zamowien",
 			component: history,
