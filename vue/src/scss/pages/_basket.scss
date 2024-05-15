@@ -56,33 +56,33 @@
   }
 }
 
-
-
-.container {
+#purchaseSuccesPage{
   text-align: center;
-  padding-bottom: 20px;
-}
-.thank-you {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.order-details {
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-.return_main {
-  background-color: #22c55d;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-.return_main {
-  background-color: #22c55d;
+  padding: 9rem 0 13rem;
+
+  .title{
+    margin: 1.25rem 0;
+    @include text-display-medium;
+  }
+
+  p{
+    max-width: 50rem;
+    margin: 0 auto 5rem;
+  }
+
+  button{
+    margin: 0 auto;
+  }
+
+  @include breakpoint(phone){
+    padding: 4rem 0 8rem;
+
+    .title{
+      @include text-display-small;
+    }
+
+    p{
+      margin-bottom: 2.5rem;
+    }
+  }
 }
