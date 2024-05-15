@@ -30,7 +30,7 @@
                 <p class="price">{{ item.totalPrice.toFixed(2) }} zł</p>
               </div>
 
-              <button-component variant="danger" class="delete-button">
+              <button-component variant="danger" class="delete-button" @click="removeFromCart(item.id)">
                 <Trash width="24" height="24" />
               </button-component>
             </li>
@@ -104,5 +104,12 @@ const router = useRouter();
 const closePopupAndNavigate = (path) => {
   isShoppingCartVisible.value = false;
   router.push(path);
+};
+
+const removeFromCart = (id) => {
+  const updatedCart = cart.value.filter(item => item.id !== id);
+  cart.value = updatedCart;
+  localStorage.setItem('cart', JSON.stringify(updatedCart));
+  isShoppingCartVisible.value = false;
 };
 </script>
