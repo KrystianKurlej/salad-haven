@@ -6,7 +6,12 @@ const employeesRouter = require("./employees");
 const ingredientsRouter = require("./ingredients");
 const orderHistoryRouter = require("./orderHistory");
 
-app.use(cors());
+app.use(cors({
+    origin: '*', // Dopuszcza wszystkie źródła
+    methods: ['GET', 'POST'], // Dopuszcza tylko GET i POST
+    allowedHeaders: ['Content-Type'] // Dozwala na nagłówek Content-Type
+  }));
+app.use(express.json()); 
 
 app.get("/", (req, res) => {
 	res.send(`
