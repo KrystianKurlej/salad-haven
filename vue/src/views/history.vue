@@ -1,31 +1,42 @@
 <template>
-    <div class="wrapper">
-      <breadcrumbs></breadcrumbs>
-      <h1>Historia zamówień</h1>
-      <section>
-        <p>Tu będzie wyświetlona historia zamówień.</p>
-      </section>
-      <!-- Przycisk do nawigacji do innego widoku -->
-      <button @click="navigateToAccount">Przejdź do konta</button>
-      <button @click="logout">Wyloguj się</button>
-      <div v-if="showToast" class="toast" :class="{ success: !isError, error: isError }">
-        <span>{{ toastMessage }}</span>
-        <button @click="showToast = false">X</button>
-      </div>
+  <div class="wrapper">
+    <breadcrumbs></breadcrumbs>
+    <div class="account-panel">
+      <nav class="account-menu">
+        <span>Panel klienta</span>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <router-link title="Moje dane" to="/konto">Moje dane</router-link>
+          </li>
+          <li class="menu-item active">Historia zamówień</li>
+          <span class="menu-divider"></span>
+          <li class="menu-item">
+            <button @click="logout">Wyloguj się</button>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <h1>Historia zamówień</h1>
+      </main>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script setup>
-  import { useRouter } from 'vue-router'
-  
-  const router = useRouter()
-  
-  const navigateToAccount = () => {
-    router.push('/konto')
-  }
-  
-  const logout = () => {
-    // Logika wylogowania użytkownika test
-  }
-  </script>
+<script setup>
+import { useRouter } from 'vue-router';
+import { getAuth, signOut } from 'firebase/auth';
+
+const router = useRouter();
+const auth = getAuth();
+
+const logout = () => {
+  signOut(auth).then(() => {
+    router.push('/logowanie')
+    console.log('Użytkownik wylogowany.');
+  }).catch((error) => {
+    console.error('Błąd podczas wylogowywania:', error);
+  });
+};
+</script>
   

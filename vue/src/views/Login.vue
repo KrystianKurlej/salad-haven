@@ -33,20 +33,21 @@
 <script setup>
 import { ref } from "vue";
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import { useRouter } from "vue-router";
 
 let auth;
 const email = ref('');
 const password = ref('');
 const showToast = ref(false);
-const toastMessage = ref('');
+
+const router = useRouter();
 
 auth = getAuth();
 
 const login = () => {
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then(() => {
-      showToastMessage('Zalogowano pomyślnie.', false);
-      // Tutaj możesz przekierować użytkownika do innej strony po udanym logowaniu
+      router.push('/konto')
     })
     .catch((error) => {
       showToastMessage('Nie udało się zalogować. Sprawdź poprawność adresu e-mail i hasła.', true);
