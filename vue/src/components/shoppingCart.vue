@@ -1,28 +1,32 @@
 <template>
   <div>
-    <li @click="toggleShoppingCart">
+    <li @click="toggleShoppingCart" class="menu-item-icon">
       <CartIco width="24" height="24" />
     </li>
     <div v-if="isShoppingCartVisible" class="shopping-cart-popup">
-      <div class="popup-content">
-        <!-- Image Container -->
-        <div class="image-container">
-          <img v-if="localStorageImage" :src="localStorageImage" alt="Image" />
-          <img v-else :src="defaultImage" alt="Default Image" />
-          <h1 class="empty_basket_text">Koszyk jest pusty!</h1>
-        </div>
-        <!-- Purchase Buttons -->
-        <button class="button_purch" @click="closePopupAndNavigate('/konfigurator/')">Przejdź do zamówienia</button>
-        <button class="button_purch2" @click="closePopupAndNavigate('/udanyzakup/')">Kontynuuj zakupy</button>
+      <button class="close-modal-button" @click="toggleShoppingCart">
+        <Cancel width="24" height="24" />
+      </button>
+      <div class="empty">
+        <Magnifier width="64" height="64" />
+        <h6 class="title">Koszyk jest pusty</h6>
+        <p>Lorem ipsum dolor sit amet consectetur. Pellentesque nulla scelerisque purus cum.</p>
       </div>
+      <!-- Purchase Buttons -->
+      <button-component @click="closePopupAndNavigate('/udanyzakup/')">Przejdź do zamówienia</button-component>
+      <button-component variant="secondary" @click="toggleShoppingCart">Kontynuuj zakupy</button-component>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import { useRouter } from 'vue-router';
 import CartIco from '@components/icons/CartIco.vue';
+import Magnifier from '@components/icons/Magnifier.vue';
+import Cancel from '@components/icons/Cancel.vue';
+</script>
 
+<script>
 export default {
   components: {
     CartIco

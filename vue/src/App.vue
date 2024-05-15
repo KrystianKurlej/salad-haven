@@ -19,13 +19,12 @@
         </button>
       </div>
     </div>
-  </nav>
-  <!-- komponent koszyka-->
-  
+  </nav>  
   
   <main>
     <router-view></router-view>
   </main>
+
   <footer class="footer">
     <div class="wrapper">
       <Logo />
@@ -64,14 +63,6 @@ import FacebookIco from '@components/icons/FacebookIco.vue';
 import InstagramIco from '@components/icons/InstagramIco.vue';
 import TwitterIco from '@components/icons/TwitterIco.vue';
 import ShoppingCart from "@components/shoppingCart.vue";
-
-// Eksport Koszyka
-const components = {
-  ShoppingCart
-};
-
-
-// TODO:logika obsługi wyświetlania popupa koszyka
 
 // Konfiguracja Firebase
 const firebaseConfig = {
