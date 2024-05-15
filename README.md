@@ -13,4 +13,5 @@ Konfiguracja opiera się na wybraniu bazy dla sałatki, jej rozmiaru, a następn
 ## Szczegółowy opis techniczny
 
 - Aplikacja frontendowa, na potrzeby projektu nie będzie zawierała możliwości zakupu. Proces zakupu kończy się na podsumowaniu koszyka.
-- Dane będziemy pobierać przez API, które będzie wystawiać nam Headless CMS [Strapi](https://strapi.io/)
+- Dane będziemy pobierać przez uproszczone API stworzone na potrzeby projekty. API tworzymy przez użycie Node.js Express z bazą danych opartą jedynie na plikach JSON
+- Do obsługi logowania użytkownika oraz przechowywania zdjęć produktów w sałatkach wykorzystujemy Firebase

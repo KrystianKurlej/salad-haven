@@ -33,6 +33,8 @@
 <script setup>
 import { ref } from "vue";
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import { useRouter } from "vue-router";
+import { API_URL } from "@src/main.js"
 
 let auth;
 const email = ref('');
@@ -40,18 +42,62 @@ const password = ref('');
 const showToast = ref(false);
 const toastMessage = ref('');
 
+const router = useRouter();
+
 auth = getAuth();
 
-const login = () => {
-  signInWithEmailAndPassword(auth, email.value, password.value)
-    .then(() => {
-      showToastMessage('Zalogowano pomyślnie.', false);
-      // Tutaj możesz przekierować użytkownika do innej strony po udanym logowaniu
-    })
-    .catch((error) => {
-      showToastMessage('Nie udało się zalogować. Sprawdź poprawność adresu e-mail i hasła.', true);
-      console.error('Błąd logowania:', error);
+const login = async () => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
+    const user = userCredential.user;
+
+    // Zapisujemy UID w localStorage
+    localStorage.setItem('uid', user.uid);
+
+    const response = await fetch(`${API_URL}/orderHistory/${user.uid}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
+
+    if (!response.ok) {
+      try {
+        const newOrderHistory = {
+          clientId: user.uid,
+          history: []
+        };
+
+        console.log("Tworzenie nowej historii zamówień:", newOrderHistory);
+
+        const createResponse = await fetch(`${API_URL}/orderHistory/`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            clientId: user.uid,
+            history: []
+          }),
+        });
+
+        if (!createResponse.ok) {
+          const errorMessage = await createResponse.text(); // Pobranie wiadomości o błędzie od serwera
+          throw new Error(`Nie udało się utworzyć historii zamówień: ${errorMessage}`);
+        }
+
+        console.log("Historia zamówień utworzona pomyślnie.");
+        router.push('/konto');
+      } catch (error) {
+        console.error('Błąd podczas tworzenia historii zamówień:', error);
+      }
+    } else {
+      router.push('/konto');
+    }
+  } catch (error) {
+    showToastMessage('Nie udało się zalogować. Sprawdź poprawność adresu e-mail i hasła.', true);
+    console.error('Błąd logowania:', error);
+  }
 };
 
 const resetPassword = () => {

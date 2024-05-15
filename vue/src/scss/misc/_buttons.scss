@@ -11,6 +11,7 @@ button,
 	transition-duration: 300ms;
 	cursor: pointer;
 	font-family: $font-primary;
+	text-decoration: none;
 
 	@include breakpoint(phone) {
 		width: 100%;

@@ -20,7 +20,7 @@
                 Wróć
               </button-component>
             </router-link>
-            <button-component size="large">
+            <button-component size="large" @click="saveToCart">
               Dodaj do koszyka
               <CartIco width="24" height="24"/>
             </button-component>
@@ -158,6 +158,7 @@ const setIngredientNames = async () => {
   selectedToppingsData.value = await fetchIngredientData('toppings', selectedToppings);
 };
 
+// Funkcja do liczenia ceny sałatki
 const totalPrice = computed(() => {
   const allIngredients = [...selectedIngredientsData.value, ...selectedVegetablesData.value, ...selectedProteinsData.value, ...selectedDressingsData.value, ...selectedToppingsData.value];
   return allIngredients.reduce((sum, ingredient) => sum + ingredient.price, 0);
@@ -168,4 +169,26 @@ onMounted(() => {
   setIngredientNames();
 });
 
+// Funkcja do zapisywania sałatki w localStorage jako produktu
+const saveToCart = () => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Stwórz unikalne ID dla nowego produktu
+  const newId = cart.length ? cart[cart.length - 1].id + 1 : 1;
+
+  // Stwórz nowy obiekt produktu z wybranymi składnikami i ich ID
+  const newProduct = {
+    id: newId,
+    ingredients: selectedIngredients,
+    vegetables: selectedVegetables,
+    dressings: selectedDressings,
+    proteins: selectedProteins,
+    toppings: selectedToppings,
+    totalPrice: totalPrice.value
+  };
+
+  cart.push(newProduct);
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+};
 </script>

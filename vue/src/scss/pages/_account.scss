@@ -114,3 +114,45 @@
         background-color: $color-black-100;
     }
 }
+
+// history
+.history{
+    &,.products-list{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .order{
+        padding: 0.75rem 0rem;
+        border-bottom: 1px solid $color-black-200;
+
+        .title{
+            @include text-title-small;
+            margin: 0;
+        }
+
+        p{
+            @include text-body-medium;
+            margin: 0;
+        }
+
+        .product{
+            margin: 1rem 0 .25rem;
+
+            &-header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between
+            }
+
+            .title,.price{
+                @include text-label-large;
+            }
+
+            .description{
+                @include text-body-small;
+                color: $color-black-600;
+            }
+        }
+    }
+}

@@ -222,7 +222,6 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 
@@ -418,7 +417,8 @@ const auth = getAuth();
 
 const logout = () => {
   signOut(auth).then(() => {
-    // Po wylogowaniu możesz przekierować użytkownika na stronę logowania 
+    localStorage.removeItem('uid');
+    router.push('/logowanie')
     console.log('Użytkownik wylogowany.');
   }).catch((error) => {
     console.error('Błąd podczas wylogowywania:', error);
