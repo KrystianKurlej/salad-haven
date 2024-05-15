@@ -45,3 +45,72 @@
 }
 
 // account
+.account-panel{
+    display: flex;
+    padding: 3.12rem 0;
+
+    main{
+        width: 100%;
+
+        h1{
+            @include text-display-small;
+        }
+    }
+}
+
+.account-menu{
+    width: 20rem;
+
+    .menu-list,.menu-item,.menu-divider{
+        width: 10rem;
+    }
+    
+    &,.menu-list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    span{
+        @include text-body-small;
+        color: $color-black-400;
+    }
+
+    .menu-item{
+        margin-top: .25rem;
+        padding: 0 .875rem;
+        display: flex;
+        align-items: center;
+        border-radius: .25rem;
+        transition-duration: 150ms;
+
+        &,button{
+            background-color: $color-black-50;
+            box-shadow: none;
+            height: 2.25rem;
+
+            &:hover{
+                background-color: $color-black-100;
+                cursor: pointer;
+                box-shadow: none;
+                color: $color-emerald-500;
+            }
+
+            &.active{
+                background-color: $color-emerald-500;
+                color: white;
+            }
+        }
+
+        button{
+            padding: 0;
+        }
+    }
+
+    .menu-divider{
+        margin: .625rem 0;
+        display: block;
+        height: 1px;
+        background-color: $color-black-100;
+    }
+}

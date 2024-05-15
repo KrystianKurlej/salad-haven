@@ -5,7 +5,7 @@
   </header>
   <main id="loginMain">
     <div class="wrapper">
-      <form>
+      <form @submit.prevent="login">
         <p>
           <label for="email">Adres e-mail:</label>
           <input type="email" id="email" v-model="email" placeholder="Wprowadź adres e-mail">
@@ -15,7 +15,7 @@
           <input type="password" id="password" v-model="password" placeholder="Wprowadź hasło">
         </p>
         <button-component @click="resetPassword" variant="link" id="resetPassword">Zapomniałeś hasła?</button-component>
-        <button-component size="large" variant="primary" @click="login" class="cta">Zaloguj się</button-component>
+        <button-component size="large" variant="primary" class="cta">Zaloguj się</button-component>
       </form>
 
       <span class="text-body-small">
