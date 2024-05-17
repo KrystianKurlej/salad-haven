@@ -20,20 +20,12 @@
         <h1>Historia zamówień</h1>
 
         <ul class="history">
-          <li class="order" v-for="(order, index) in orders" :key="index">
-            <h4 class="title">{{ order.products.length }} sałatki</h4>
-            <p>Data zamówienia: {{ order.date }}</p>
-            <p>{{ calculateTotalPrice(order.products) }} zł</p>
-            <ul class="products-list" v-for="(product, productIndex) in order.products" :key="productIndex">
-              <li class="product">
-                <div class="product-header">
-                  <h6 class="title">{{ product.title }}</h6>
-                  <span class="price">{{ product.price.toFixed(2) }} zł</span>
-                </div>
-                <p class="description">{{ product.shortDescription }}</p>
-              </li>
-            </ul>
-          </li>
+          <order-item
+            v-for="(order, index) in orders"
+            :key="index"
+            :order="order"
+            :calculate-total-price="calculateTotalPrice"
+          />
         </ul>
       </main>
     </div>
@@ -44,6 +36,7 @@
 import { useRouter } from 'vue-router';
 import { getAuth, signOut } from 'firebase/auth';
 import {API_URL} from '@src/main.js'
+import OrderItem from '@components/OrderItem.vue';
 
 const router = useRouter();
 const auth = getAuth();

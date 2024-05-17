@@ -727,6 +727,7 @@ label {
 .history .order {
   padding: 0.75rem 0rem;
   border-bottom: 1px solid #e5e7eb;
+  position: relative;
 }
 .history .order .title {
   font-size: 1.25rem;
@@ -741,6 +742,21 @@ label {
   line-height: 150%;
   letter-spacing: -0.011rem;
   margin: 0;
+}
+.history .order #expand {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.history .order #expand svg {
+  transform: rotate(0);
+  transition-duration: 300ms;
+}
+.history .order #expand.active svg {
+  transform: rotate(180deg);
 }
 .history .order .product {
   margin: 1rem 0 0.25rem;
