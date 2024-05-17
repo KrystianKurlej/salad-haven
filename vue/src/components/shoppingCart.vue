@@ -37,7 +37,6 @@
           </ul>
         </div>
       </div>
-      <!-- Purchase Buttons -->
       <button-component @click="purchaseCart('/udanyzakup/')">Przejdź do zamówienia</button-component>
       <button-component variant="secondary" @click="toggleShoppingCart">Kontynuuj zakupy</button-component>
     </div>
@@ -52,7 +51,7 @@ import CartIco from '@components/icons/CartIco.vue';
 import Magnifier from '@components/icons/Magnifier.vue';
 import Cancel from '@components/icons/Cancel.vue';
 import Trash from '@components/icons/Trash.vue';
-// import { API_URL } from '@src/main.js'; nie wiem dlaczego to nie działa
+
 const API_URL = 'http://localhost:3000';
 
 const cart = ref([]);
@@ -79,20 +78,31 @@ const loadCart = async () => {
   cart.value = storedCart;
 
   const allIds = [
-   ...new Set(storedCart.flatMap(item => [
-     ...item.ingredients,
-     ...item.vegetables,
-     ...item.dressings,
-     ...item.proteins,
-     ...item.toppings // Make sure this property exists in your cart items
+    ...new Set(storedCart.flatMap(item => [
+      ...item.ingredients,
+      ...item.vegetables,
+      ...item.dressings,
+      ...item.proteins,
+      ...item.toppings
     ]))
   ];
   await Promise.all(allIds.map(id => fetchIngredientData(id)));
 };
 
-onMounted(() => {
-  loadCart();
-});
+const updateCart = async () => {
+  const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.value = storedCart;
+  const allIds = [
+    ...new Set(storedCart.flatMap(item => [
+      ...item.ingredients,
+      ...item.vegetables,
+      ...item.dressings,
+      ...item.proteins,
+      ...item.toppings
+    ]))
+  ];
+  await Promise.all(allIds.map(id => fetchIngredientData(id)));
+};
 
 const isShoppingCartVisible = ref(false);
 
@@ -100,52 +110,14 @@ const toggleShoppingCart = () => {
   isShoppingCartVisible.value = !isShoppingCartVisible.value;
 };
 
-const router = useRouter();
-
-const purchaseCart = async (path) => {
-  const clientId = localStorage.getItem('uid');
-  
-  if (!clientId) {
-    console.error('Client ID is missing');
-    return;
-  }
-
-  const newOrder = {
-    date: new Date().toISOString().split('T')[0],
-    products: cart.value.map(item => {
-      const ingredientsNames = item.ingredients.map(id => getIngredientData(id)?.name ?? '').join('\n');
-      const vegetablesNames = item.vegetables.map(id => getIngredientData(id)?.name ?? '').join('\n');
-      const dressingsNames = item.dressings.map(id => getIngredientData(id)?.name ?? '').join('\n');
-      const proteinsNames = item.proteins.map(id => getIngredientData(id)?.name ?? '').join('\n');
-
-      return {
-        id: item.id,
-        status: "new",
-        title: `Sałatka ${ingredientsNames}`,
-        shortDescription: `${ingredientsNames}\n${vegetablesNames}\n${dressingsNames}\n${proteinsNames}`,
-        price: item.totalPrice,
-        thumbnailUrl: getIngredientData(item.ingredients[0]).imgSrc
-      };
-    })
-  };
-
-  fetch(`${API_URL}/orderHistory/${clientId}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(newOrder)
-  })
-
-  toggleShoppingCart();
-  localStorage.removeItem('cart');
-  router.push('/udanyzakup')
-};
-
-const removeFromCart = (id) => {
-  const updatedCart = cart.value.filter(item => item.id !== id);
+const removeFromCart = (itemId) => {
+  const updatedCart = cart.value.filter(item => item.id !== itemId);
   cart.value = updatedCart;
   localStorage.setItem('cart', JSON.stringify(updatedCart));
-  isShoppingCartVisible.value = false;
 };
+
+onMounted(() => {
+  loadCart();
+  window.addEventListener('product-added', updateCart);
+});
 </script>

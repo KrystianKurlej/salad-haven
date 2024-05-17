@@ -20,7 +20,7 @@
                 Wróć
               </button-component>
             </router-link>
-            <button-component size="large" @click="saveToCart">
+            <button-component size="large" @click="saveToCartAndNotify">
               Dodaj do koszyka
               <CartIco width="24" height="24"/>
             </button-component>
@@ -111,14 +111,13 @@
 </template>
 
 <script setup>
-import { API_URL } from '@src/main.js';
+import { ref, onMounted, computed } from 'vue';
+import { useRouter } from 'vue-router';
+import axios from 'axios';
 import RightChevron from '@components/icons/RightChevron.vue';
 import CartIco from '@components/icons/CartIco.vue';
+import { API_URL } from '@src/main.js';
 
-import { ref, onMounted, computed } from 'vue';
-import axios from 'axios';
-
-// Deklaracja referencji do przechowywania nazw składników
 const selectedIngredientsData = ref([]);
 const selectedVegetablesData = ref([]);
 const selectedProteinsData = ref([]);
@@ -132,7 +131,6 @@ const selectedDressings = JSON.parse(localStorage.getItem('selectedDressings')) 
 const selectedProteins = JSON.parse(localStorage.getItem('selectedProteins')) || [];
 const selectedToppings = JSON.parse(localStorage.getItem('selectedToppings')) || [];
 
-// Funkcja do pobierania danych składników z API na podstawie ich identyfikatorów
 const fetchIngredientData = async (category, ids) => {
   const data = [];
   if (Array.isArray(ids)) {
@@ -149,7 +147,6 @@ const fetchIngredientData = async (category, ids) => {
   return data;
 };
 
-// Funkcja do ustawiania nazw składników w odpowiednich referencjach
 const setIngredientNames = async () => {
   selectedIngredientsData.value = await fetchIngredientData('ingredients', selectedIngredients);
   selectedVegetablesData.value = await fetchIngredientData('vegetables', selectedVegetables);
@@ -158,25 +155,20 @@ const setIngredientNames = async () => {
   selectedToppingsData.value = await fetchIngredientData('toppings', selectedToppings);
 };
 
-// Funkcja do liczenia ceny sałatki
 const totalPrice = computed(() => {
   const allIngredients = [...selectedIngredientsData.value, ...selectedVegetablesData.value, ...selectedProteinsData.value, ...selectedDressingsData.value, ...selectedToppingsData.value];
   return allIngredients.reduce((sum, ingredient) => sum + ingredient.price, 0);
 });
 
-// Wywołanie funkcji setIngredientNames() po zamontowaniu komponentu
 onMounted(() => {
   setIngredientNames();
 });
 
-// Funkcja do zapisywania sałatki w localStorage jako produktu
 const saveToCart = () => {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  // Stwórz unikalne ID dla nowego produktu
   const newId = cart.length ? cart[cart.length - 1].id + 1 : 1;
 
-  // Stwórz nowy obiekt produktu z wybranymi składnikami i ich ID
   const newProduct = {
     id: newId,
     ingredients: selectedIngredients,
@@ -188,7 +180,15 @@ const saveToCart = () => {
   };
 
   cart.push(newProduct);
-
   localStorage.setItem('cart', JSON.stringify(cart));
+
+  return newProduct;
+};
+
+const saveToCartAndNotify = () => {
+  const newProduct = saveToCart();
+  // Emit an event to notify other components about the new product
+  const event = new CustomEvent('product-added', { detail: newProduct });
+  window.dispatchEvent(event);
 };
 </script>
