@@ -125,6 +125,7 @@
     .order{
         padding: 0.75rem 0rem;
         border-bottom: 1px solid $color-black-200;
+        position: relative;
 
         .title{
             @include text-title-small;
@@ -134,6 +135,24 @@
         p{
             @include text-body-medium;
             margin: 0;
+        }
+
+        #expand{
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+
+            svg{
+                transform: rotate(0);
+                transition-duration: 300ms;
+            }
+
+            &.active svg{
+                transform: rotate(180deg);
+            }
         }
 
         .product{
